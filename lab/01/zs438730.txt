@@ -1,0 +1,8 @@
+Parametry wykresu:
+
+1. --window=100000. W artykule używane jest 1e4, jednak wybrałam 1e5 dla czytelności do interpretacji.
+2. --stride=200. Nie mogłam znaleźć tej wartości w artykule. 200 wydawało się praktyczne ze względu na prędkość obliczeń.
+
+Na wykresie widać 2 miejsca przecięcia z O_X. Miejsca te wydają się oddalone od siebie mniej więcej o tyle samo. Możemy wywnioskować, że są to origin i terminus - miejsca początku i końca replikacji DNA. Terimnus możemy wyznaczyć po największej wartości CGC-skew, ponieważ dla genomów bakteryjnych, G > C on the leading strand, co sugeruje miejsce zmiany znaku + na - na wykresie GC-skew, czyli ok. 1.5M BP; równoważnie, origin możemy znaleźć po najmniejszej wartości CGC-skew, czyli miejscu zmiany znaku - na +, czyli ok. 3.9M BP. Obydwie te wartości zgadzają się z wykresem z artykułu. Wyznaczyłam je patrząc na średnią przedziału epsilon-bliskiego 0, dla episilon=5e-4 (wartość dobrana ręcznie).
+
+Większą częstość guaniny od cytozyny on the leading strand również widać: liczyłam najmniejsze i największe GC-skew, otrzymując MIN≈-0.052, MAX≈0.055, więc |MAX| > |MIN|, czyli G > C. Zjawisko to utrzymywało się dna różnych parametrów `--window` i `--stride`.
