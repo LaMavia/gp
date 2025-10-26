@@ -109,6 +109,7 @@ def main():
     ax1.set_ylabel("distance to stationary distribution")
 
     fig.show()
+    plt.show()
     fig.savefig("jc69.png")
 
 

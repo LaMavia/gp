@@ -2,12 +2,11 @@ Parametry symulacji:
 
 1. -S: `A^{1e5}`
 2. -d: `1`
-3. -K: `50`
-4. -a (alpha): `0.005`
+3. -K: `60`
+4. -a (alpha): `0.002`
 5. -f: element `{1.0, 2.0}` (stosowałam w samym skrypcie odwrotną transformację: `(d, K) -> (d*f, K/f)`, ponieważ łatwiej było mi znaleźć parametry dla dużych `K` i małych `d`)
 
-Przy transformacji `(d, K) -> (d/f, K*f)` zachowujemy łączną liczbę kroków symulacji - `d/f * K*f = Kd`. Niech `T(K, d) = <0..Kd - 1>` będzie ciągiem czasów symulacji. Przez `T_P(K, d) = <t : T(K, d) | t = 0 mod d>` oznaczmy ciąg czasów pomiaru danych do wykresu. Oczywiście `|T_P(K, d)| = floor(|T(K, d)| / d) = K`. Dlatego przy transformacji `(d, K) -> (d/f, K*f)` otrzymujemy `|T_P(K*f, d/f)| = floor(|T(K*f, d/f)| * f / d) = floor(K * d * f / d) = floor(Kf)`.
+Podczas transformacji `(d, K) -> (d/2, K*2)`, dla sekwencji `A^{1e5}` odległość od rozkładu stacjonarnego maleje szybciej, niż dla symulacji przed transformacją.
+Intuicyjnie, prawdopodobieństwo zmiany elementu na inny w 2 krokach (time: 2t, 2t+1 w odróżnieniu od time: 2t) jest wyższe, niż zmiana go w 1 kroku, więc sekwencja homogeniczna szybciej zyskuje różnorodne elementy.
 
-Dla przypadku `f = 2` z polecenia, obserwujemy więc 2-krotne zwiększenie ilości punktów na wykresie (wykres lewy).
-
-Oczywiście nie wpływa to nijak na symulację, ponieważ wciąż wykonujemy każdy z `Kd` kroków oraz zaczynamy z tej samej sekwencji początkowej. Dla dłuższych sekwencji, wykresy te są z dużym prawdopodobieństwem do siebie bardzo podobne, więc dla wystarczająco długich sekwencji, są one niemal identyczne (wykres prawy).
+Z analizy numerycznej (plik `jc69_dist.png`, skrypt `jc69_dist.py`) wynika, że prawdopodobieństwo zmiany elementu sekwnecji dla 2 kroków (i->j->k : 2t, 2t+1) rośnie szybciej, niż prawdopodobieństwo zmiany elementu dla 1 kroku (i->k : 2t) [wykres 1]. Stosunek tych prawdopodobieństw w momencie t (p_ijk/p_ik) zawiera się w ciągu malejącym (2.5, 1) oraz w ciągu malejącym (1, 0.6) + ciągu rosnącym (0.6, 1.0), odpowiednio dla prawdopodobieństwa zmiany elementu i pozostawienia tego samego elementu [wykres 2]. Wykresy 3-7 zawierają rozpatrzenia wszystkich przypadków relacji R1(i, j), R2(j, k), R3(k, i) dla kroków i->j->k, i->k.
