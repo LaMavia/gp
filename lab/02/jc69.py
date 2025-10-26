@@ -63,18 +63,16 @@ class JC:
         self.seq = (self.seq + self.p()) % JC.SIGMA
 
     def gather_data(self):
-        if self.t % self.d == 0:
-            counts = np.array(
-                [np.count_nonzero(self.seq == i) for i in range(JC.SIGMA)]
-            )
-            counts = counts.astype(np.float64) / np.sum(counts)
+        counts = np.array(
+            [np.count_nonzero(self.seq == i) for i in range(JC.SIGMA)]
+        )
+        counts = counts.astype(np.float64) / np.sum(counts)
 
-            self.xs.append(self.t)
-            self.ys.append(np.linalg.norm(JC.ST_DIST - counts))
+        self.xs.append(self.t)
+        self.ys.append(np.linalg.norm(JC.ST_DIST - counts))
 
     def run(self):
-        for t in range(self.K * self.d):
-            self.t = t
+        for self.t in range(0, self.K * self.d, self.d):
             self.gather_data()
             self.step_seq()
 
@@ -86,12 +84,12 @@ class JC:
 def main():
     args = parser.parse_args()
 
-    factors = [1.0, 2.0, 5.0]
-    ls = [1e2, 5e2, 1e3, 5e3, 1e4, 5e4, 1e5, 5e5, 1e6, 5e6]
+    factors = [float(x) for x in range(1, 3, 1) if args.steps % x == 0]
+    # ls = []
 
-    s = list(".1234")
+    s = ['o-']
 
-    fig, (ax1, ax2) = plt.subplots(1, 2)
+    fig, ax1 = plt.subplots()
 
     for i, f in enumerate(tqdm(factors[::-1], "Factors")):
         jc = JC(
@@ -110,49 +108,8 @@ def main():
     ax1.set_xlabel("t")
     ax1.set_ylabel("distance to stationary distribution")
 
-    sim_xs = []
-    sim_ys = []
-    sim_yerr = []
-    for j, l in enumerate(tqdm(ls, "Sequence lengths")):
-        common_xs = set()
-        yss = []
-        for i, f in enumerate(factors):
-            jc = JC(
-                seq="A" * int(l),
-                d=(d := int(args.interval * f)),
-                K=(K := int(args.steps / f)),
-                alpha=args.alpha,
-            )
-            jc.run()
-            yss.append((jc.xs, jc.ys))
-            if i == 0:
-                common_xs = common_xs.union(jc.xs)
-            else:
-                common_xs.intersection_update(jc.xs)
-
-        yss = [
-            np.array([y for x, y in zip(xs, ys) if x in common_xs]) for xs, ys in yss
-        ]
-        diffs = [
-            np.linalg.norm(ys_a - ys_b)
-            for i_a, ys_a in enumerate(yss)
-            for i_b, ys_b in enumerate(yss)
-            if i_a > i_b
-        ]
-
-        sim_xs.append(l)
-        sim_ys.append(np.average(diffs))
-        sim_yerr.append([np.min(diffs), np.max(diffs)])
-
-    ax2.errorbar(sim_xs, sim_ys, yerr=np.array(sim_yerr).T, fmt="-c", capsize=4)
-    ax2.set_yscale("log")
-    ax2.set_xscale("log")
-    ax2.set(title="random-run plot difference for varying sequence lengths")
-    ax2.set_xlabel("sequence length")
-    ax2.set_ylabel("avg. plot distance between scaling factors")
-
     fig.show()
-    plt.show()
+    fig.savefig("jc69.png")
 
 
 if __name__ == "__main__":
