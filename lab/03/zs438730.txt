@@ -1,0 +1,1 @@
+W przypadku 3n <= m zastosowałam uproszczoną wersję conformational space annealing.
