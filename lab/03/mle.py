@@ -161,6 +161,7 @@ class MLE:
         if 3 * n > m:
             return np.log(3 * (n + m) / (3 * n - m)) / (4 * self.a)
         else:
+            print(f"CSA\t[A] {a}\n\n[B] {b}")
             sim = lambda t1, t2: abs(t1 - t2) 
             score = lambda t: self.pJC(a, b, t) / t
             rounds = 50
@@ -246,6 +247,8 @@ if __name__ == "__main__":
 
     labels, M = mle.simmatrix(sys.argv[1])    
     im, cbar = heatmap(M, labels, labels)
-    annotate_heatmap(im, valfmt='{x:.02f}')
+    annotate_heatmap(im, valfmt='{x:.03f}')
+    matplotlib.rcParams['figure.figsize'] = (10, 10)
+    plt.savefig("mle.png", dpi=400)
     plt.show()
 

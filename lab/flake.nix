@@ -10,7 +10,9 @@
     {
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
-
+          (rWrapper.override
+            { packages = with rPackages; [ TreeDist languageserver ]; })
+          muscle
         ] ++ (with python313Packages; [
           python
           biopython
