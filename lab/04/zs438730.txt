@@ -1,1 +1,11 @@
 Według sugestii podczas laboratorium, pobrałam sekwencje 18S rRNA dla danych gatunków, niektóre z nich oznaczone były jako "predicted".
+
+Do uliniowienia sekwencji wykorzystałam program muscle.
+Do inferencji drzewa filogenetycznego przetestowałam programy iq-tree, veryfasttree orax RaxML. Końcowo wybrałam iq-tree ze względu na mniejszą odległość RF od drzewa z TimeTree niż drzewo z veryfasttree. Było ono również równoodległe od drzewa z programu RaxML (używanego również w TimeTree).
+Do porównywania drzew użyłam 2 funkcji z biblioteki TreeDist: 
+  1. RobinsonFouldsMatching - zwraca dopasowane splity między drzewami;
+  2. znormalizowanego RobinsonFoulds - miara RF podzielona przez liczbę splitów w obydwu drzewach. 
+
+Otrzymałam miarę RF 0.43, więc obydwie inferencje znacznie się różnią, jednak nie są całkowicie różne (widzimy np. zachowanie relacji dorsza i karpia).
+Timetree używa czasów specjacji zsyntetyzowanych z pól-ręcznego przeglądu tysięcy prac naukowych. Większość węzłów znajduje swoje oszacowanie zaledwie w jednaj pracy, co może być częścią powodu różnicy drzew.
+Dodatkowym powodem może być fakt, że wiele z użytych przeze mnie sekwencji było predicted.
