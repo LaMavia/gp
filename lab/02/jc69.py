@@ -62,19 +62,26 @@ class JC:
     def step_seq(self):
         self.seq = (self.seq + self.p()) % JC.SIGMA
 
-    def gather_data(self):
+    def gather_data(self, t:int):
         counts = np.array(
             [np.count_nonzero(self.seq == i) for i in range(JC.SIGMA)]
         )
         counts = counts.astype(np.float64) / np.sum(counts)
 
-        self.xs.append(self.t)
+        self.xs.append(t)
         self.ys.append(np.linalg.norm(JC.ST_DIST - counts))
 
     def run(self):
-        for self.t in range(0, self.K * self.d, self.d):
-            self.gather_data()
-            self.step_seq()
+        print(f"============ {self.K=}, {self.d=}")
+        for self.t in range(0, self.K):
+            self.gather_data(self.t * self.d)
+            for _ in range(self.d):
+                print(f"{self.t=}")
+                self.step_seq()
+        # for self.t in range(0, self.K * self.d, self.d):
+        #     self.gather_data()
+        #     self.step_seq()
+        print("============")
 
     def plot(self):
         plt.plot(self.xs, self.ys, ".")
@@ -84,26 +91,52 @@ class JC:
 def main():
     args = parser.parse_args()
 
-    factors = [float(x) for x in range(1, 3, 1) if args.steps % x == 0]
-    # ls = []
-
+    # factors = [float(x) for x in range(1, 3, 1) if args.steps % x == 0]
+    # # ls = []
+    #
     s = ['o-']
-
+    #
     fig, ax1 = plt.subplots()
+    jc0 = JC(
+        seq=f"{args.sequence}",
+        d=args.interval,
+        K=args.steps,
+        alpha=args.alpha
+    )
+    jc1 = JC(
+        seq=f"{args.sequence}",
+        d=args.interval//2,
+        K=args.steps * 2,
+        alpha=args.alpha
+    )
 
-    for i, f in enumerate(tqdm(factors[::-1], "Factors")):
-        jc = JC(
-            seq=args.sequence,
-            d=(d := int(args.interval * f)),
-            K=(K := int(args.steps / f)),
-            alpha=args.alpha,
-        )
-        jc.run()
-        ax1.plot(jc.xs, jc.ys, s[i % len(s)], label=f"{d=}, {K=}", alpha=0.5)
+    for t in range(args.interval * args.steps):
+        jc0.t = t
+        jc1.t = t//2
+        jc0.gather_data(t)
+        jc1.gather_data(t)
+
+        jc0.step_seq()
+        jc1.step_seq()
+        jc1.step_seq()
+
+    ax1.plot(jc0.xs, jc0.ys, s[0], label="normal")
+    ax1.plot(jc1.xs, jc1.ys, s[0], label="d/2, K*2")
+
+    #
+    # for i, f in enumerate(tqdm(factors[::-1], "Factors")):
+    #     jc = JC(
+    #         seq=args.sequence,
+    #         d=(d := int(args.interval * f)),
+    #         K=(K := int(args.steps / f)),
+    #         alpha=args.alpha,
+    #     )
+    #     jc.run()
+    #     ax1.plot(jc.xs, jc.ys, s[i % len(s)], label=f"{d=}, {K=}", alpha=0.5)
 
     ax1.legend()
     ax1.set(
-        title=f"JC69 simulation: $\\alpha$={args.alpha}, $K \\in$ {[int(args.steps / f) for f in factors[::-1]]}, $d \\in$ {[int(f * args.interval) for f in factors[::-1]]}"
+        title=f"JC69 simulation"
     )
     ax1.set_xlabel("t")
     ax1.set_ylabel("distance to stationary distribution")

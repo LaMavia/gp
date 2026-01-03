@@ -244,6 +244,13 @@ if __name__ == "__main__":
     b = f("ACCAT--CGC-TCCTTAGGAG---ACAATCTCTGGGAACAGGA-")
     
     mle = MLE(1)
+    opt = mle.optT(a, b)
+    print(f"{opt=}")
+
+    ts = np.linspace(0, 1, 1000)
+    ps = mle.pJC(a, b, ts)
+    plt.plot(ts, ps)
+    plt.show()
 
     labels, M = mle.simmatrix(sys.argv[1])    
     im, cbar = heatmap(M, labels, labels)

@@ -1,0 +1,40 @@
+# Paper 1
+
+## title
+
+Coronavirus Genomics and Bioinformatics Analysis
+
+## URL
+
+https://mdpi-res.com/d_attachment/viruses/viruses-02-01804/article_deploy/viruses-02-01804.pdf?version=1431414588
+
+## Sequence ids
+
+NC_002306
+DQ811787
+NC_012937
+NC_002645
+NC_005831
+NC_003436
+NC_009657
+NC_009988
+NC_010438
+NC_010437
+NC_010436
+NC_005147
+NC_003045
+NC_007732
+NC_006577
+NC_006852
+NC_010327
+NC_004718
+NC_009694
+NC_009019
+NC_009020
+NC_009021
+NC_001451
+NC_010800
+NC_010646
+FJ376620
+NC_011549
+NC_011550

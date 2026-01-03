@@ -1,0 +1,3865 @@
+{
+  "count": 4296,
+  "next": "https://www.ebi.ac.uk/interpro/api/protein/UniProt/entry/pfam/PF00839/?cursor=source%7Cs%7Ca0a077zkq7&page_size=30",
+  "previous": null,
+  "results": [
+    {
+      "metadata": {
+        "accession": "A0A016TZV2",
+        "name": "Cysteine rich repeat-containing domain protein",
+        "source_database": "unreviewed",
+        "length": 1195,
+        "source_organism": {
+          "taxId": "53326",
+          "scientificName": "Ancylostoma ceylanicum",
+          "fullName": "Ancylostoma ceylanicum"
+        },
+        "gene": "Acey_s0065.g3610",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 122,
+                  "end": 180,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.1
+            },
+            {
+              "fragments": [
+                {
+                  "start": 186,
+                  "end": 251,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.077
+            },
+            {
+              "fragments": [
+                {
+                  "start": 268,
+                  "end": 321,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 399,
+                  "end": 454,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 464,
+                  "end": 522,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 528,
+                  "end": 595,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.9e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 600,
+                  "end": 655,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0018
+            },
+            {
+              "fragments": [
+                {
+                  "start": 664,
+                  "end": 721,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.4e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 726,
+                  "end": 779,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 858,
+                  "end": 907,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.5e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 917,
+                  "end": 982,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 993,
+                  "end": 1051,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.5e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 1057,
+                  "end": 1112,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-10
+            }
+          ],
+          "protein_length": 1195,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A016U0G9",
+        "name": "Cysteine rich repeat-containing domain protein",
+        "source_database": "unreviewed",
+        "length": 1216,
+        "source_organism": {
+          "taxId": "53326",
+          "scientificName": "Ancylostoma ceylanicum",
+          "fullName": "Ancylostoma ceylanicum"
+        },
+        "gene": "Acey_s0065.g3610",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 143,
+                  "end": 201,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.1
+            },
+            {
+              "fragments": [
+                {
+                  "start": 207,
+                  "end": 272,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.079
+            },
+            {
+              "fragments": [
+                {
+                  "start": 289,
+                  "end": 342,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.8e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 420,
+                  "end": 475,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 485,
+                  "end": 543,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.5e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 549,
+                  "end": 616,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.9e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 621,
+                  "end": 676,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0018
+            },
+            {
+              "fragments": [
+                {
+                  "start": 685,
+                  "end": 742,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.6e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 747,
+                  "end": 800,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.4e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 879,
+                  "end": 928,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.6e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 938,
+                  "end": 1003,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 1014,
+                  "end": 1072,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 1078,
+                  "end": 1133,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.7e-10
+            }
+          ],
+          "protein_length": 1216,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023EHD3",
+        "name": "Putative golgi apparatus protein cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 186,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 2,
+                  "end": 49,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00059
+            },
+            {
+              "fragments": [
+                {
+                  "start": 60,
+                  "end": 112,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.8e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 125,
+                  "end": 178,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.1e-10
+            }
+          ],
+          "protein_length": 186,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023EKQ2",
+        "name": "Putative golgi apparatus protein cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 238,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 39,
+                  "end": 98,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 104,
+                  "end": 158,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.2e-9
+            }
+          ],
+          "protein_length": 238,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023ELC5",
+        "name": "Putative golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 253,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 1,
+                  "end": 48,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 9.3e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 54,
+                  "end": 113,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.2e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 119,
+                  "end": 173,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.6e-9
+            }
+          ],
+          "protein_length": 253,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023EM83",
+        "name": "Putative golgi glycoprotein 1",
+        "source_database": "unreviewed",
+        "length": 278,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": false,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 143,
+                  "end": 198,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0023
+            },
+            {
+              "fragments": [
+                {
+                  "start": 202,
+                  "end": 256,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 9e-11
+            }
+          ],
+          "protein_length": 278,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023ENY0",
+        "name": "Putative golgi glycoprotein 1",
+        "source_database": "unreviewed",
+        "length": 297,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 139,
+                  "end": 198,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0001
+            },
+            {
+              "fragments": [
+                {
+                  "start": 202,
+                  "end": 256,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 262,
+                  "end": 297,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0008
+            }
+          ],
+          "protein_length": 297,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023EUV1",
+        "name": "Putative golgi apparatus protein cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 545,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 32,
+                  "end": 90,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.8e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 97,
+                  "end": 150,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.9e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 162,
+                  "end": 216,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.4e-12
+            },
+            {
+              "fragments": [
+                {
+                  "start": 220,
+                  "end": 273,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 279,
+                  "end": 340,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 346,
+                  "end": 405,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.8e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 411,
+                  "end": 465,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            }
+          ],
+          "protein_length": 545,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023EWC0",
+        "name": "Putative golgi apparatus protein cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 531,
+        "source_organism": {
+          "taxId": "7160",
+          "scientificName": "Aedes albopictus",
+          "fullName": "Aedes albopictus (Asian tiger mosquito)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 4,
+                  "end": 48,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0087
+            },
+            {
+              "fragments": [
+                {
+                  "start": 59,
+                  "end": 111,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 124,
+                  "end": 177,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.4e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 185,
+                  "end": 250,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.4e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 260,
+                  "end": 316,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.5e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 318,
+                  "end": 376,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.6e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 383,
+                  "end": 436,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.7e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 448,
+                  "end": 507,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.1e-9
+            }
+          ],
+          "protein_length": 531,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023GKH3",
+        "name": "Putative cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 263,
+        "source_organism": {
+          "taxId": "251400",
+          "scientificName": "Amblyomma triste",
+          "fullName": "Amblyomma triste (Neotropical tick)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 4,
+                  "end": 64,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.4e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 72,
+                  "end": 122,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 128,
+                  "end": 183,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.1e-11
+            }
+          ],
+          "protein_length": 263,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A023GNL5",
+        "name": "Putative golgi apparatus protein cysteine-rich fibroblast growth factor receptor",
+        "source_database": "unreviewed",
+        "length": 629,
+        "source_organism": {
+          "taxId": "251400",
+          "scientificName": "Amblyomma triste",
+          "fullName": "Amblyomma triste (Neotropical tick)"
+        },
+        "gene": null,
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 8,
+                  "end": 71,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 74,
+                  "end": 127,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.2e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 133,
+                  "end": 194,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0005
+            },
+            {
+              "fragments": [
+                {
+                  "start": 201,
+                  "end": 254,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.5e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 265,
+                  "end": 322,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.4e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 328,
+                  "end": 392,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 402,
+                  "end": 457,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.8e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 460,
+                  "end": 517,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 525,
+                  "end": 576,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.5e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 591,
+                  "end": 628,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.28
+            }
+          ],
+          "protein_length": 629,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A026WUB3",
+        "name": "Golgi apparatus protein",
+        "source_database": "unreviewed",
+        "length": 1128,
+        "source_organism": {
+          "taxId": "2015173",
+          "scientificName": "Ooceraea biroi",
+          "fullName": "Ooceraea biroi (Clonal raider ant)"
+        },
+        "gene": "X777_16790",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 114,
+                  "end": 167,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0048
+            },
+            {
+              "fragments": [
+                {
+                  "start": 173,
+                  "end": 235,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00024
+            },
+            {
+              "fragments": [
+                {
+                  "start": 237,
+                  "end": 291,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.2e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 297,
+                  "end": 358,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.5e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 364,
+                  "end": 417,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.3e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 427,
+                  "end": 484,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.2e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 489,
+                  "end": 555,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 562,
+                  "end": 616,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00028
+            },
+            {
+              "fragments": [
+                {
+                  "start": 618,
+                  "end": 677,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.2e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 684,
+                  "end": 733,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.5e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 750,
+                  "end": 804,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.3e-12
+            },
+            {
+              "fragments": [
+                {
+                  "start": 809,
+                  "end": 861,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.2e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 865,
+                  "end": 925,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.3e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 933,
+                  "end": 987,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.5e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 994,
+                  "end": 1050,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.1e-9
+            }
+          ],
+          "protein_length": 1128,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A034VNQ1",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 1105,
+        "source_organism": {
+          "taxId": "27457",
+          "scientificName": "Bactrocera dorsalis",
+          "fullName": "Bactrocera dorsalis (Oriental fruit fly)"
+        },
+        "gene": "GSLG1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 255,
+                  "end": 316,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 322,
+                  "end": 389,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.8e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 399,
+                  "end": 453,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.3e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 460,
+                  "end": 523,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.5e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 536,
+                  "end": 591,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 594,
+                  "end": 652,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.1e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 659,
+                  "end": 712,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 9e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 724,
+                  "end": 777,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 782,
+                  "end": 834,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.1e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 840,
+                  "end": 901,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 907,
+                  "end": 962,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 970,
+                  "end": 1024,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.6e-9
+            }
+          ],
+          "protein_length": 1105,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A034VR47",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 1109,
+        "source_organism": {
+          "taxId": "27457",
+          "scientificName": "Bactrocera dorsalis",
+          "fullName": "Bactrocera dorsalis (Oriental fruit fly)"
+        },
+        "gene": "GSLG1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 255,
+                  "end": 316,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 322,
+                  "end": 389,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.8e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 399,
+                  "end": 453,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.3e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 460,
+                  "end": 523,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.5e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 536,
+                  "end": 591,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.1e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 594,
+                  "end": 652,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.2e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 659,
+                  "end": 712,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 9.1e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 724,
+                  "end": 781,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 786,
+                  "end": 838,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.1e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 844,
+                  "end": 905,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.1e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 911,
+                  "end": 966,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 974,
+                  "end": 1028,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.6e-9
+            }
+          ],
+          "protein_length": 1109,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A060WJR1",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 1123,
+        "source_organism": {
+          "taxId": "8022",
+          "scientificName": "Oncorhynchus mykiss",
+          "fullName": "Oncorhynchus mykiss (Rainbow trout)"
+        },
+        "gene": "GSONMT00073388001",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 97,
+                  "end": 153,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 158,
+                  "end": 217,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.2e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 232,
+                  "end": 288,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5e-12
+            },
+            {
+              "fragments": [
+                {
+                  "start": 292,
+                  "end": 355,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 362,
+                  "end": 411,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 424,
+                  "end": 480,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.2e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 484,
+                  "end": 545,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 557,
+                  "end": 610,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.9e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 614,
+                  "end": 672,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.7e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 676,
+                  "end": 730,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00041
+            },
+            {
+              "fragments": [
+                {
+                  "start": 744,
+                  "end": 799,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.4e-14
+            },
+            {
+              "fragments": [
+                {
+                  "start": 802,
+                  "end": 855,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.4e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 859,
+                  "end": 921,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.4e-13
+            },
+            {
+              "fragments": [
+                {
+                  "start": 926,
+                  "end": 982,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.9e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 990,
+                  "end": 1044,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-11
+            }
+          ],
+          "protein_length": 1123,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A060X0C9",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 873,
+        "source_organism": {
+          "taxId": "8022",
+          "scientificName": "Oncorhynchus mykiss",
+          "fullName": "Oncorhynchus mykiss (Rainbow trout)"
+        },
+        "gene": "GSONMT00034073001",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 15,
+                  "end": 68,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 4.6e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 73,
+                  "end": 132,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 2.6e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 148,
+                  "end": 203,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 1e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 207,
+                  "end": 269,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 4.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 296,
+                  "end": 350,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.1e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 353,
+                  "end": 411,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.9e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 415,
+                  "end": 469,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00031
+            },
+            {
+              "fragments": [
+                {
+                  "start": 483,
+                  "end": 538,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.2e-14
+            },
+            {
+              "fragments": [
+                {
+                  "start": 541,
+                  "end": 594,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 598,
+                  "end": 660,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.4e-13
+            },
+            {
+              "fragments": [
+                {
+                  "start": 665,
+                  "end": 721,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 729,
+                  "end": 783,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 9.2e-13
+            }
+          ],
+          "protein_length": 873,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A060ZHI7",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 192,
+        "source_organism": {
+          "taxId": "8022",
+          "scientificName": "Oncorhynchus mykiss",
+          "fullName": "Oncorhynchus mykiss (Rainbow trout)"
+        },
+        "gene": "GSONMT00035893001",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 2,
+                  "end": 45,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 58,
+                  "end": 113,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.7e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 118,
+                  "end": 179,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.5e-9
+            }
+          ],
+          "protein_length": 192,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061QLM5",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 907,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 123,
+                  "end": 180,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 184,
+                  "end": 237,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 241,
+                  "end": 295,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 300,
+                  "end": 361,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 366,
+                  "end": 421,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 425,
+                  "end": 477,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 484,
+                  "end": 543,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 549,
+                  "end": 604,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 609,
+                  "end": 662,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00014
+            },
+            {
+              "fragments": [
+                {
+                  "start": 668,
+                  "end": 726,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3e-5
+            }
+          ],
+          "protein_length": 907,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061QML1",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 884,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": false,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 113,
+                  "end": 171,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 174,
+                  "end": 227,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 232,
+                  "end": 286,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 292,
+                  "end": 355,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 357,
+                  "end": 412,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 416,
+                  "end": 471,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 476,
+                  "end": 537,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 541,
+                  "end": 595,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 600,
+                  "end": 653,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00024
+            },
+            {
+              "fragments": [
+                {
+                  "start": 659,
+                  "end": 717,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-7
+            }
+          ],
+          "protein_length": 884,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061R495",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 500,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "TSPGSL018_15891",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 1,
+                  "end": 38,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 0.00011
+            },
+            {
+              "fragments": [
+                {
+                  "start": 44,
+                  "end": 97,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.6e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 108,
+                  "end": 163,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 237,
+                  "end": 291,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.022
+            },
+            {
+              "fragments": [
+                {
+                  "start": 300,
+                  "end": 354,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 360,
+                  "end": 412,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.6e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 420,
+                  "end": 472,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.5e-10
+            }
+          ],
+          "protein_length": 500,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061RAY5",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 919,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "TSPGSL018_7169",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 137,
+                  "end": 189,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 4.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 195,
+                  "end": 248,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.5e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 259,
+                  "end": 314,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.3e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 388,
+                  "end": 442,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.049
+            },
+            {
+              "fragments": [
+                {
+                  "start": 451,
+                  "end": 505,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.2e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 511,
+                  "end": 563,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.8e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 571,
+                  "end": 623,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.2e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 628,
+                  "end": 681,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0012
+            }
+          ],
+          "protein_length": 919,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061RIC4",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 907,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": false,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 123,
+                  "end": 180,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 184,
+                  "end": 237,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 241,
+                  "end": 295,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 300,
+                  "end": 361,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 366,
+                  "end": 421,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 425,
+                  "end": 477,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 484,
+                  "end": 543,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 549,
+                  "end": 604,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 609,
+                  "end": 662,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00014
+            },
+            {
+              "fragments": [
+                {
+                  "start": 668,
+                  "end": 726,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3e-5
+            }
+          ],
+          "protein_length": 907,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061S0T5",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 907,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 123,
+                  "end": 180,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.4e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 184,
+                  "end": 237,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 241,
+                  "end": 295,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 300,
+                  "end": 361,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 366,
+                  "end": 421,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 425,
+                  "end": 477,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 484,
+                  "end": 543,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 549,
+                  "end": 604,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 609,
+                  "end": 662,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00014
+            },
+            {
+              "fragments": [
+                {
+                  "start": 668,
+                  "end": 726,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3e-5
+            }
+          ],
+          "protein_length": 907,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061SA33",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 890,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 117,
+                  "end": 175,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.2e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 179,
+                  "end": 233,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 236,
+                  "end": 290,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 295,
+                  "end": 356,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.7e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 362,
+                  "end": 417,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.5e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 420,
+                  "end": 474,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00016
+            },
+            {
+              "fragments": [
+                {
+                  "start": 481,
+                  "end": 540,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.4e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 545,
+                  "end": 599,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.7e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 602,
+                  "end": 657,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.8e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 664,
+                  "end": 722,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.3e-7
+            }
+          ],
+          "protein_length": 890,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061SAF8",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 884,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "ESL1",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 113,
+                  "end": 171,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.6e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 174,
+                  "end": 227,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 232,
+                  "end": 286,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.3e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 292,
+                  "end": 355,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.1e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 357,
+                  "end": 412,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 416,
+                  "end": 471,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 476,
+                  "end": 537,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.9e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 541,
+                  "end": 595,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.9e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 600,
+                  "end": 653,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00024
+            },
+            {
+              "fragments": [
+                {
+                  "start": 659,
+                  "end": 717,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1e-7
+            }
+          ],
+          "protein_length": 884,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061SAU2",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 982,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "TSPGSL018_11571",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 137,
+                  "end": 189,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": true,
+              "model": "PF00839",
+              "score": 4.4e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 195,
+                  "end": 248,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.8e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 259,
+                  "end": 314,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.5e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 388,
+                  "end": 442,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.053
+            },
+            {
+              "fragments": [
+                {
+                  "start": 451,
+                  "end": 505,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.3e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 511,
+                  "end": 563,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6.2e-6
+            },
+            {
+              "fragments": [
+                {
+                  "start": 571,
+                  "end": 623,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.5e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 628,
+                  "end": 681,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0013
+            }
+          ],
+          "protein_length": 982,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A061SDF6",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 585,
+        "source_organism": {
+          "taxId": "582737",
+          "scientificName": "Tetraselmis sp. GSL018",
+          "fullName": "Tetraselmis sp. GSL018"
+        },
+        "gene": "TSPGSL018_8762",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 1,
+                  "end": 56,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.3e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 58,
+                  "end": 113,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 117,
+                  "end": 172,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 177,
+                  "end": 238,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 242,
+                  "end": 296,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 301,
+                  "end": 354,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00014
+            },
+            {
+              "fragments": [
+                {
+                  "start": 360,
+                  "end": 418,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 6e-8
+            }
+          ],
+          "protein_length": 585,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A067R9F6",
+        "name": "Golgi apparatus protein 1",
+        "source_database": "unreviewed",
+        "length": 1121,
+        "source_organism": {
+          "taxId": "136037",
+          "scientificName": "Zootermopsis nevadensis",
+          "fullName": "Zootermopsis nevadensis (Dampwood termite)"
+        },
+        "gene": "L798_09662",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 164,
+                  "end": 223,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0019
+            },
+            {
+              "fragments": [
+                {
+                  "start": 226,
+                  "end": 279,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 286,
+                  "end": 346,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.6e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 353,
+                  "end": 405,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.8e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 415,
+                  "end": 471,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.6e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 478,
+                  "end": 542,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 8.2e-7
+            },
+            {
+              "fragments": [
+                {
+                  "start": 554,
+                  "end": 606,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.7e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 609,
+                  "end": 668,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.8e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 675,
+                  "end": 728,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0003
+            },
+            {
+              "fragments": [
+                {
+                  "start": 740,
+                  "end": 795,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 3.3e-10
+            },
+            {
+              "fragments": [
+                {
+                  "start": 798,
+                  "end": 851,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2e-5
+            },
+            {
+              "fragments": [
+                {
+                  "start": 856,
+                  "end": 918,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 2.2e-12
+            },
+            {
+              "fragments": [
+                {
+                  "start": 924,
+                  "end": 981,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.4e-8
+            },
+            {
+              "fragments": [
+                {
+                  "start": 989,
+                  "end": 1043,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7e-10
+            }
+          ],
+          "protein_length": 1121,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A074ZIW0",
+        "name": "Cysteine rich repeat-containing domain protein",
+        "source_database": "unreviewed",
+        "length": 1114,
+        "source_organism": {
+          "taxId": "6198",
+          "scientificName": "Opisthorchis viverrini",
+          "fullName": "Opisthorchis viverrini"
+        },
+        "gene": "T265_14678",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 52,
+                  "end": 136,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0049
+            },
+            {
+              "fragments": [
+                {
+                  "start": 139,
+                  "end": 193,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7.9e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 198,
+                  "end": 254,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00087
+            },
+            {
+              "fragments": [
+                {
+                  "start": 278,
+                  "end": 326,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 1.1e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 340,
+                  "end": 395,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.16
+            },
+            {
+              "fragments": [
+                {
+                  "start": 403,
+                  "end": 464,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0029
+            },
+            {
+              "fragments": [
+                {
+                  "start": 567,
+                  "end": 622,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.00016
+            },
+            {
+              "fragments": [
+                {
+                  "start": 707,
+                  "end": 762,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 7e-9
+            },
+            {
+              "fragments": [
+                {
+                  "start": 765,
+                  "end": 830,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.013
+            },
+            {
+              "fragments": [
+                {
+                  "start": 843,
+                  "end": 904,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 5.1e-11
+            },
+            {
+              "fragments": [
+                {
+                  "start": 985,
+                  "end": 1031,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.11
+            }
+          ],
+          "protein_length": 1114,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "accession": "A0A077ZKQ7",
+        "name": "Cys rich FGFR domain containing protein",
+        "source_database": "unreviewed",
+        "length": 363,
+        "source_organism": {
+          "taxId": "36087",
+          "scientificName": "Trichuris trichiura",
+          "fullName": "Trichuris trichiura (Whipworm)"
+        },
+        "gene": "TTRE_0000871201",
+        "in_alphafold": true,
+        "in_bfvd": false
+      },
+      "entries": [
+        {
+          "accession": "PF00839",
+          "entry_protein_locations": [
+            {
+              "fragments": [
+                {
+                  "start": 163,
+                  "end": 223,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.39
+            },
+            {
+              "fragments": [
+                {
+                  "start": 236,
+                  "end": 290,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 4.5e-14
+            },
+            {
+              "fragments": [
+                {
+                  "start": 297,
+                  "end": 356,
+                  "dc-status": "CONTINUOUS"
+                }
+              ],
+              "representative": false,
+              "model": "PF00839",
+              "score": 0.0014
+            }
+          ],
+          "protein_length": 363,
+          "source_database": "pfam",
+          "entry_type": "family",
+          "entry_integrated": "ipr001893"
+        }
+      ]
+    }
+  ]
+}

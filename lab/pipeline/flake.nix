@@ -1,7 +1,6 @@
 {
   inputs = {
     utils.url = "github:numtide/flake-utils";
-    nixpkgs.url = "nixpkgs/nixos-unstable";
   };
   outputs = { self, nixpkgs, utils }: utils.lib.eachDefaultSystem (system:
     let
@@ -15,12 +14,10 @@
           (rWrapper.override
             { packages = with rPackages; [ TreeDist languageserver ggtree treeio ]; })
           muscle
-          raxml
-          veryfasttree
         ] ++ (with python313Packages; [
           python
           biopython
-          matplotlib
+          altair
           tqdm
           numpy
           requests
