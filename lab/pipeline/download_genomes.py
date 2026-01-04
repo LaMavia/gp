@@ -1,6 +1,7 @@
 from collections import defaultdict
 from itertools import groupby
 import re
+import sys
 from typing import Optional
 from Bio import SeqIO, Entrez
 import pandas as pd
@@ -119,9 +120,13 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
         print("NONE")
         return None
 
+    # if id == "DQ811787":
+    #     print(json.dumps(x, indent=2), file=sys.stderr)
     dq_poses = []
 
+    seqlen = 0
     for item in x:
+        seqlen = len(item["GBSeq_sequence"])
         genes = []
         for feature in item["GBSeq_feature-table"]:
             if feature["GBFeature_key"] == "CDS":
@@ -159,14 +164,14 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
                     dq_poses.append((p, q))
 
                 if gene is not None:
-                    genes.append((gene, f"{p}-{q}", q - p + 1))
+                    genes.append((gene, p, q))
                     # print(f"{location};{q - p + 1};{gene}")
                 # print({"length": q - p + 1, "g": gene, "p": product, "n": note})
 
         if id == "DQ811787":
             p = min(lp for lp, _ in dq_poses)
             q = max(lq for _, lq in dq_poses)
-            genes.append(("ORF 1a/1b", f"{p}-{q}", q - p + 1))
+            genes.append(("ORF 1a/1b", p, q))
 
         gene_groups = defaultdict(list)
         for p in genes:
@@ -179,14 +184,14 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
             else:
                 genes[g] = ps[0]
 
-        print(id, end="")
+        print(f"{id};{seqlen}", end="")
         gs = ["E", "M", "N", "ORF 1a/1b", "S"]
         # prefixes = [normalize_key(g) for g in gs]
         for g in gs:
             # pref = normalize_key(g)
             if (p := genes.get(g)) is not None:
-                _, loc, ln = p
-                print(f";{loc};{ln}", end="")
+                _, s, e = p
+                print(f";{s};{e}", end="")
             else:
                 print(r";\N;\N", end="")
 
@@ -198,10 +203,10 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
 def main():
     gs = ["E", "M", "N", "ORF 1a/1b", "S"]
     prefs = ["e", "m", "n", "orf", "s"]
-    print("name;id", end="")
+    print("name;id;seqlen", end="")
     for g, pref in zip(gs, prefs):
         # pref = normalize_key(g)
-        print(f";{pref}_loc;{pref}_len", end="")
+        print(f";{pref}_start;{pref}_end", end="")
     print("")
     csv = pd.read_csv("./genomes.csv", delimiter=";")
     names = list(csv["name"])

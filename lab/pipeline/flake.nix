@@ -23,6 +23,7 @@
           numpy
           requests
           ruff
+          jupyter
         ]);
       };
     }
