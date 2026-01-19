@@ -10,3 +10,7 @@ tmp
 *.fasta
 *_cluster.tsv
 *out
+
+clusters/*
+!clusters/.*
+

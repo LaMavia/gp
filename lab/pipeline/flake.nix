@@ -27,6 +27,10 @@
           ruff
           jupyter
         ]);
+
+        shellHook = ''
+          export PATH="/home/mavia/projectes/uni/gp/lab/04/iqtree-3.0.1-Linux/bin:$PATH"
+        '';
       };
     }
   );

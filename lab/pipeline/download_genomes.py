@@ -240,7 +240,12 @@ def download_by_id(id: str):
                     )
                 elif gene is not None:
                     genes.append(
-                        (gene, Seq.translate(nuc_seq[p : q + 1]).lower(), p, q)
+                        (
+                            gene,
+                            Seq.translate(nuc_seq[p : q + 1], stop_symbol="").lower(),
+                            p,
+                            q,
+                        )
                     )
 
         gene_groups = defaultdict(list)
