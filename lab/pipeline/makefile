@@ -1,14 +1,34 @@
 all: genomes
 
 clean:
-	rm -rf ./sequences ./tmp ./clusters
-	mkdir -p ./sequences ./clusters
-	touch ./sequences/.gitkeep ./clusters/.gitkeep
+	rm -rf ./sequences ./tmp ./clusters ./trees
+	mkdir -p ./sequences ./clusters ./trees
+	touch ./sequences/.gitkeep ./clusters/.gitkeep ./trees/.gitkeep
 	
 	rm ./*.fasta ./*_cluster.tsv
 
-family_sup_trees:
+trees:
+	find . -depth -maxdepth 1 -name '*_rep_seq.afa.treefile' -print0 |\
+		parallel --plus -0 \
+		python3 ./substitute_family_trees.py \
+			{} \
+			./clusters/{%_rep_seq.afa.treefile}_all_seqs \
+			./trees
 
+sup_trees:
+	find . -name '*_rep_seq.afa' -print0 |\
+		parallel --progress -0\
+		iqtree3 --redo -s {}
+
+naive_sup_trees:
+	find . -name '*_rep_seq.afa' -print0 |\
+		parallel --progress -0\
+		python3 ./make_naive_trees.py {}
+
+sup_alignments:
+	find . -name '*_rep_seq.fasta' -print0 |\
+		parallel --progress -0 \
+		muscle -align {} -output {.}.afa
 
 family_sub_trees:
 	find ./clusters -name '*.afa' -print0 |\

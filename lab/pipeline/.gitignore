@@ -8,9 +8,12 @@ sequences/*
 
 tmp
 *.fasta
+*.afa*
 *_cluster.tsv
 *out
 
 clusters/*
 !clusters/.*
 
+trees/*
+!trees/.*
