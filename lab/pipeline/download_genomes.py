@@ -11,8 +11,10 @@ Entrez.email = "zs438730@students.mimuw.edu.pl"
 
 GENOMES_DIR = "genomes"
 
+POLY_GENE = "ORF 1a/1b"
+
 GENE_NAME_MAP_RAW = {
-    "ORF 1a/1b": {
+    POLY_GENE: {
         "ORF 1a/1b",
         "orf1ab polyprotein",
         "replicase polyprotein 1ab",
@@ -23,6 +25,8 @@ GENE_NAME_MAP_RAW = {
         "1ab",
         "ORF 1ab polyprotein",
         "Pol1",
+        "replicase 1a",
+        "replicase 1b",
     },
     "S": {
         "S",
@@ -69,7 +73,27 @@ GENE_NAME_MAP_RAW = {
     },
 }
 
+SUB_FEATURES_RAW = {
+    "*PL": r".+CoV_PLPro$",
+    "CPL": r"^(CoV_PLPro|CoV_peptidase|Peptidase_C16)$",
+    "Hel": r".*13-helicase$",
+    "Pol": r".*RdRp.*",
+    "3CL": r".*_Nsp5_Mpro$",
+}
+
+SUB_FEATURES = {g: re.compile(r) for g, r in SUB_FEATURES_RAW.items()}
+
 GENE_DISAMB = {"N": lambda p: p[2] > 1000, "ORF 1a/1b": lambda p: p[2] > 20_000}
+
+PROTEIN_ID_REDIRECT = {"NP_937947.2": "NP_937947.1", "YP_209229.1": "YP_209229.2"}
+
+
+def lookup_sub_feature(key: str) -> Optional[str]:
+    for gene, key_regex in SUB_FEATURES.items():
+        if key_regex.match(key) is not None:
+            return gene
+
+    return None
 
 
 def normalize_key(k: str | None) -> str | None:
@@ -97,7 +121,7 @@ def parse_location(loc: str) -> tuple[int, int]:
     return int(ps.strip("<>")), int(qs.strip("<>"))
 
 
-def find_assoc_exc[T](
+def find_assoc_exc(
     assoc: list, keys: list[tuple[str, str]], val_key: str
 ) -> str | None:
     for item in assoc:
@@ -106,6 +130,54 @@ def find_assoc_exc[T](
                 return item[val_key]
 
     return None
+
+
+def spread_subfeature(
+    gene: tuple[str, set[tuple[str, int, int]]],
+) -> dict[str, set[tuple[str, int, int]]]:
+    name, subs = gene
+    if len(subs) <= 1:
+        return {name: subs}
+
+    a, b = sorted(subs, key=lambda x: x[1])
+
+    if b[1] <= a[2]:
+        if a[2] - a[1] > b[2] - b[1]:
+            return {"CPL": {a}}
+        return {"CPL": {b}}
+
+    return {"CPL": {a}, "*PL": {b}}
+
+
+def extract_subfeatures(
+    protein_id: str,
+) -> list[tuple[str, str, int, int]]:  # name, seq, start, end
+    handle = Entrez.efetch(db="protein", id=protein_id, rettype="xml")
+    x = Entrez.read(handle)
+    features = []
+
+    for item in x:
+        seq = item["GBSeq_sequence"]
+
+        for feature in item["GBSeq_feature-table"]:
+            if feature["GBFeature_key"] == "Region":
+                raw_region_name = (
+                    find_assoc_exc(
+                        feature["GBFeature_quals"],
+                        [("GBQualifier_name", "region_name")],
+                        "GBQualifier_value",
+                    )
+                    or ""
+                )
+                if (gene := lookup_sub_feature(raw_region_name)) is None:
+                    continue
+
+                location = feature["GBFeature_location"]
+                p, q = parse_location(location)
+
+                features.append((gene, "-" or seq[p : q + 1], p, q))
+
+    return features
 
 
 def download_by_id(id: str, tag: str, sequences_dir: str):
@@ -120,9 +192,7 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
         print("NONE")
         return None
 
-    # if id == "DQ811787":
-    #     print(json.dumps(x, indent=2), file=sys.stderr)
-    dq_poses = []
+    poly_protein_ids = []
 
     seqlen = 0
     for item in x:
@@ -147,31 +217,28 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
                     [("GBQualifier_name", "note")],
                     "GBQualifier_value",
                 )
+                protein_id = (
+                    find_assoc_exc(
+                        feature["GBFeature_quals"],
+                        [("GBQualifier_name", "protein_id")],
+                        "GBQualifier_value",
+                    )
+                    or ""
+                )
                 p, q = parse_location(location)
 
-                og_gene = gene
                 gene = (
                     GENE_NAME_MAP.get(normalize_key(gene))
                     or GENE_NAME_MAP.get(normalize_key(product))
                     or GENE_NAME_MAP.get(normalize_key(note))
                 )
 
-                if (
-                    id == "DQ811787"
-                    and product is not None
-                    and product.startswith("replicase")
-                ):
-                    dq_poses.append((p, q))
-
                 if gene is not None:
                     genes.append((gene, p, q))
-                    # print(f"{location};{q - p + 1};{gene}")
-                # print({"length": q - p + 1, "g": gene, "p": product, "n": note})
-
-        if id == "DQ811787":
-            p = min(lp for lp, _ in dq_poses)
-            q = max(lq for _, lq in dq_poses)
-            genes.append(("ORF 1a/1b", p, q))
+                if gene == POLY_GENE:
+                    poly_protein_ids.append(
+                        PROTEIN_ID_REDIRECT.get(protein_id, protein_id)
+                    )
 
         gene_groups = defaultdict(list)
         for p in genes:
@@ -184,17 +251,30 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
             else:
                 genes[g] = ps[0]
 
-        print(f"{id};{seqlen}", end="")
+        print(f"{id=}, {poly_protein_ids=}")
+
+        raw_protein_features = defaultdict(set)
+        for protein_id in poly_protein_ids:
+            for gene, seq, p, q in extract_subfeatures(protein_id):
+                raw_protein_features[gene].add((seq, p, q))
+
+        protein_features = {}
+        for f in raw_protein_features.items():
+            protein_features.update(spread_subfeature(f))
+
+        print(*protein_features.items(), sep="\n")
+
+        # print(f"{id};{seqlen}", end="")
         gs = ["E", "M", "N", "ORF 1a/1b", "S"]
         # prefixes = [normalize_key(g) for g in gs]
-        for g in gs:
-            # pref = normalize_key(g)
-            if (p := genes.get(g)) is not None:
-                _, s, e = p
-                print(f";{s};{e}", end="")
-            else:
-                print(r";\N;\N", end="")
-
+        # for g in gs:
+        #     # pref = normalize_key(g)
+        #     if (p := genes.get(g)) is not None:
+        #         _, s, e = p
+        #         print(f";{s};{e}", end="")
+        #     else:
+        #         print(r";\N;\N", end="")
+        #
         print("")
         # for g, loc, ln in sorted(genes, key=lambda p: p[0]):
         #     print(f";{g};{ln};{loc}")
