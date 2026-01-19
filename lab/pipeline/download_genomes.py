@@ -1,11 +1,13 @@
 from collections import defaultdict
+from io import TextIOWrapper
 from itertools import groupby
 import re
 import sys
 from typing import Optional
-from Bio import SeqIO, Entrez
+from Bio import SeqIO, Entrez, Seq
 import pandas as pd
 import json
+from tqdm import tqdm
 
 Entrez.email = "zs438730@students.mimuw.edu.pl"
 
@@ -175,12 +177,12 @@ def extract_subfeatures(
                 location = feature["GBFeature_location"]
                 p, q = parse_location(location)
 
-                features.append((gene, "-" or seq[p : q + 1], p, q))
+                features.append((gene, seq[p : q + 1], p, q))
 
     return features
 
 
-def download_by_id(id: str, tag: str, sequences_dir: str):
+def download_by_id(id: str):
     # pat = re.compile(r"[\s\t\n]*")
     # print(f"\n{id=}")
     # print("")
@@ -194,9 +196,8 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
 
     poly_protein_ids = []
 
-    seqlen = 0
     for item in x:
-        seqlen = len(item["GBSeq_sequence"])
+        nuc_seq = item["GBSeq_sequence"]
         genes = []
         for feature in item["GBSeq_feature-table"]:
             if feature["GBFeature_key"] == "CDS":
@@ -233,16 +234,18 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
                     or GENE_NAME_MAP.get(normalize_key(note))
                 )
 
-                if gene is not None:
-                    genes.append((gene, p, q))
                 if gene == POLY_GENE:
                     poly_protein_ids.append(
                         PROTEIN_ID_REDIRECT.get(protein_id, protein_id)
                     )
+                elif gene is not None:
+                    genes.append(
+                        (gene, Seq.translate(nuc_seq[p : q + 1]).lower(), p, q)
+                    )
 
         gene_groups = defaultdict(list)
         for p in genes:
-            gene_groups[p[0]].append(p)
+            gene_groups[p[0]].append(p[1:])
 
         genes = {}
         for g, ps in gene_groups.items():
@@ -250,8 +253,6 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
                 genes[g] = [p for p in ps if GENE_DISAMB[g]][0]
             else:
                 genes[g] = ps[0]
-
-        print(f"{id=}, {poly_protein_ids=}")
 
         raw_protein_features = defaultdict(set)
         for protein_id in poly_protein_ids:
@@ -262,38 +263,32 @@ def download_by_id(id: str, tag: str, sequences_dir: str):
         for f in raw_protein_features.items():
             protein_features.update(spread_subfeature(f))
 
-        print(*protein_features.items(), sep="\n")
+        protein_features = {k: list(v)[0] for k, v in protein_features.items()}
 
-        # print(f"{id};{seqlen}", end="")
-        gs = ["E", "M", "N", "ORF 1a/1b", "S"]
-        # prefixes = [normalize_key(g) for g in gs]
-        # for g in gs:
-        #     # pref = normalize_key(g)
-        #     if (p := genes.get(g)) is not None:
-        #         _, s, e = p
-        #         print(f";{s};{e}", end="")
-        #     else:
-        #         print(r";\N;\N", end="")
-        #
-        print("")
-        # for g, loc, ln in sorted(genes, key=lambda p: p[0]):
-        #     print(f";{g};{ln};{loc}")
+        return {**genes, **protein_features}
 
 
 def main():
-    gs = ["E", "M", "N", "ORF 1a/1b", "S"]
-    prefs = ["e", "m", "n", "orf", "s"]
-    print("name;id;seqlen", end="")
-    for g, pref in zip(gs, prefs):
-        # pref = normalize_key(g)
-        print(f";{pref}_start;{pref}_end", end="")
-    print("")
     csv = pd.read_csv("./genomes.csv", delimiter=";")
-    names = list(csv["name"])
+    names = [n.replace(" ", "_") for n in csv["name"]]
     ids = list(csv["id"])
-    for id, name in zip(ids, names):
-        print(f"{name};", end="")
-        download_by_id(id=id, tag="", sequences_dir="")
+    gene_files: dict[str, TextIOWrapper] = {}
+    bar = tqdm(list(zip(ids, names)), desc="Downloading genes")
+
+    for id, name in bar:
+        bar.set_postfix_str(name)
+        if (genes := download_by_id(id=id)) is None:
+            continue
+
+        for gene, (seq, _, _) in genes.items():
+            if gene not in gene_files:
+                gene_files[gene] = open(f"sequences/{gene}.fasta", "w")
+
+            gene_files[gene].write(f">{name}\n{seq}\n")
+
+    for f in gene_files.values():
+        f.flush()
+        f.close()
 
 
 if __name__ == "__main__":

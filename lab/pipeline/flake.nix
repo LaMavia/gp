@@ -12,6 +12,8 @@
         buildInputs = with pkgs; [
           mmseqs2
           cd-hit
+          blast-bin
+          parallel
           (rWrapper.override
             { packages = with rPackages; [ TreeDist languageserver ggtree treeio Signac ]; })
           muscle

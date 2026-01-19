@@ -2,3 +2,11 @@ analysis-reports*
 nsq*
 out*
 __pycache__
+
+sequences/*
+!sequences/.*
+
+tmp
+*.fasta
+*_cluster.tsv
+*out
