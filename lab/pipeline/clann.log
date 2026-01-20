@@ -1,0 +1,213 @@
+opening commands file clann_commands.txt
+
+
+	*********************************************************************
+	*                                                                   *
+	*                           Clann  v4.2.5                           *
+	* Investigating phylogenetic information through supertree analyses *
+	*                                                                   *
+	*                  lab: http://www.creeveylab.org                   *
+	*                  email: chris.creevey@gmail.com                   *
+	*                                                                   *
+	*                 Copyright Chris Creevey 2003-2020                 *
+	*                                                                   *
+	*          HINT: Type "help" to see all available commands          *
+	*********************************************************************
+
+clann> exe ./trees.ph;
+
+Reading Newhampshire (Phylip) format source trees
+
+	Source tree summmary:
+
+	----------------------------------------------------
+		Number of input trees: 9
+		Number of unique taxa: 28
+		Total unrooted trees in Supertree space?
+			2.98023e+33
+
+	Occurrence summary:
+
+		number	Taxa name           		Occurrence
+
+		0   	ThCoV_HKU12                   	9
+		1   	BuCoV_HKU11                   	9
+		2   	MunCoV_HKU13                  	9
+		3   	HCoV-229E                     	9
+		4   	Mi-BatCoV_1B                  	9
+		5   	Mi-BatCoV_1A                  	9
+		6   	FCoV                          	9
+		7   	TGEV                          	9
+		8   	PRCV                          	9
+		9   	Rh-BatCoV-HKU2                	9
+		10  	Mi-BatCoV-HKU8                	9
+		11  	PEDV                          	9
+		12  	Sc-BatCoV_512                 	9
+		13  	HCoV-NL63                     	9
+		14  	SARSr-CoV                     	9
+		15  	SARSr-Rh-BatCoV               	9
+		16  	Ro-BatCoV-HKU9                	9
+		17  	Pi-BatCoV-HKU5                	9
+		18  	Ty-BatCoV-HKU4                	9
+		19  	MHV                           	9
+		20  	HCoV-OC43                     	9
+		21  	PHEV                          	9
+		22  	ECoV                          	9
+		23  	BCoV                          	9
+		24  	HCoV-HKU1                     	9
+		25  	SW1                           	9
+		26  	TCoV                          	9
+		27  	IBV                           	9
+
+
+	Co-occurrence summary:
+
+		Taxa Number
+      
+		      0     1     2     3     4     5     6     7     8     9     10    11    
+		0     -     
+		1     9     -     
+		2     9     9     -     
+		3     9     9     9     -     
+		4     9     9     9     9     -     
+		5     9     9     9     9     9     -     
+		6     9     9     9     9     9     9     -     
+		7     9     9     9     9     9     9     9     -     
+		8     9     9     9     9     9     9     9     9     -     
+		9     9     9     9     9     9     9     9     9     9     -     
+		10    9     9     9     9     9     9     9     9     9     9     -     
+		11    9     9     9     9     9     9     9     9     9     9     9     -     
+		12    9     9     9     9     9     9     9     9     9     9     9     9     
+		13    9     9     9     9     9     9     9     9     9     9     9     9     
+		14    9     9     9     9     9     9     9     9     9     9     9     9     
+		15    9     9     9     9     9     9     9     9     9     9     9     9     
+		16    9     9     9     9     9     9     9     9     9     9     9     9     
+		17    9     9     9     9     9     9     9     9     9     9     9     9     
+		18    9     9     9     9     9     9     9     9     9     9     9     9     
+		19    9     9     9     9     9     9     9     9     9     9     9     9     
+		20    9     9     9     9     9     9     9     9     9     9     9     9     
+		21    9     9     9     9     9     9     9     9     9     9     9     9     
+		22    9     9     9     9     9     9     9     9     9     9     9     9     
+		23    9     9     9     9     9     9     9     9     9     9     9     9     
+		24    9     9     9     9     9     9     9     9     9     9     9     9     
+		25    9     9     9     9     9     9     9     9     9     9     9     9     
+		26    9     9     9     9     9     9     9     9     9     9     9     9     
+		27    9     9     9     9     9     9     9     9     9     9     9     9     
+
+	Co-occurence summary continued:
+		      12    13    14    15    16    17    18    19    20    21    22    23    
+		12    -     
+		13    9     -     
+		14    9     9     -     
+		15    9     9     9     -     
+		16    9     9     9     9     -     
+		17    9     9     9     9     9     -     
+		18    9     9     9     9     9     9     -     
+		19    9     9     9     9     9     9     9     -     
+		20    9     9     9     9     9     9     9     9     -     
+		21    9     9     9     9     9     9     9     9     9     -     
+		22    9     9     9     9     9     9     9     9     9     9     -     
+		23    9     9     9     9     9     9     9     9     9     9     9     -     
+		24    9     9     9     9     9     9     9     9     9     9     9     9     
+		25    9     9     9     9     9     9     9     9     9     9     9     9     
+		26    9     9     9     9     9     9     9     9     9     9     9     9     
+		27    9     9     9     9     9     9     9     9     9     9     9     9     
+
+	Co-occurence summary continued:
+		      24    25    26    27    
+		24    -     
+		25    9     -     
+		26    9     9     -     
+		27    9     9     9     -     
+
+
+	Source tree size summary:
+
+  num leaves
+	28  |======================================== (9)
+
+
+
+	Number of single copy trees:	9
+	number of multicopy trees:	0
+	----------------------------------------------------
+clann> set criterion=dfit;
+clann> hs nreps=1 sample=100;
+
+
+Heuristic Search settings:
+	Criterion = Most Similar Supertree (dfit)
+	Heuristic search algorithm = Sub-tree Pruning and Regrafting (SPR)
+	Maximum Number of Steps (nsteps) = 3
+	Maximum Number of Swaps (maxswaps) = 1000000
+	Number of repetitions of Heuristic search = 1
+	Weighting Scheme = comparisons
+	Starting trees = neighbor-joining tree from Average consensus distances
+	Missing data estimated using  4 point condition distances
+	Output file = Heuristic_result.txt
+
+Heuristic search progress indicator:
+Repetition 1 of 1:====
+Number of topologies tried: 10483
+                                                                                
+                                                                                
+                                             +-------------- MunCoV_HKU13       
+                                     +-------|                                  
+                                     |       |      +------- ThCoV_HKU12        
+                                     |       +------|                           
+               +---------------------|              +------- BuCoV_HKU11        
+               |                     |                                          
+               |                     |       +-------------- SW1                
+               |                     +-------|                                  
+               |                             |      +------- TCoV               
+               |                             +------|                           
+               |                                    +------- IBV                
+       +-------|                                                                
+       |       |                     +---------------------- Rh-BatCoV-HKU2     
+       |       |                     |                                          
+       |       |      +--------------|              +------- TGEV               
+       |       |      |              |       +------|                           
+       |       |      |              +-------|      +------- FCoV               
+       |       |      |                      |                                  
+       |       |      |                      +-------------- PRCV               
+       |       +------|                                                         
+       |              |                             +------- HCoV-NL63          
+       |              |       +---------------------|                           
+       |              |       |                     +------- HCoV-229E          
+       |              |       |                                                 
++------|              +-------|                     +------- PEDV               
+|      |                      |      +--------------|                           
+|      |                      |      |              +------- Sc-BatCoV_512      
+|      |                      +------|                                          
+|      |                             |       +------+------- Mi-BatCoV_1B       
+|      |                             |       |      |                           
+|      |                             +-------|      +------- Mi-BatCoV_1A       
+|      |                                     |                                  
+|      |                                     +-------------- Mi-BatCoV-HKU8     
+|      |                                                                        
+|      |                                            +------- Ty-BatCoV-HKU4     
+|      |                             +--------------|                           
+|      |                             |              +------- Pi-BatCoV-HKU5     
+|      +-----------------------------|                                          
+|                                    |              +------- SARSr-Rh-BatCoV    
+|                                    |       +------|                           
+|                                    +-------|      +------- SARSr-CoV          
+|                                            |                                  
+|                                            +-------------- Ro-BatCoV-HKU9     
+|                                                                               
+|----------------------------------------------------------- HCoV-HKU1          
+|                                                                               
+|                                    +---------------------- MHV                
+|                                    |                                          
++------------------------------------|              +------- ECoV               
+                                     |       +------|                           
+                                     |       |      +------- PHEV               
+                                     +-------|                                  
+                                             |      +------- HCoV-OC43          
+                                             +------|                           
+                                                    +------- BCoV               
+
+Supertree 1 of 1 score = 14.071428
+
+Time taken: 18 seconds
+

@@ -7,6 +7,18 @@ clean:
 	
 	rm ./*.fasta ./*_cluster.tsv
 
+supertree:
+	./make_ph.sh
+	clann -ln -c clann_commands.txt
+	sed -i 's/\[.*\]//' ./Heuristic_result.txt
+
+consensus: all_trees.treefile
+	iqtree3 -con ./all_trees.treefile ./con.treefile
+	python3 ./remove_dummpy_taxon.py ./con.treefile ./con.treefile
+
+all_trees.treefile:
+	find ./trees/ -name '*.treefile' -print0 | parallel -0 Rscript ./pt.R {} | grep 'Unrooted' -B 7 | grep '\[1\]' | sed 's/\[1\] //' | sed 's/"//g' | parallel cat {} > all_trees.treefile
+
 trees:
 	find . -depth -maxdepth 1 -name '*_rep_seq.afa.treefile' -print0 |\
 		parallel --progress --plus -0 \
