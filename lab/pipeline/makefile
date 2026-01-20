@@ -5,7 +5,8 @@ clean:
 	mkdir -p ./sequences ./clusters ./trees
 	touch ./sequences/.gitkeep ./clusters/.gitkeep ./trees/.gitkeep
 	
-	rm ./*.fasta ./*_cluster.tsv
+	rm -f ./*.fasta ./*_cluster.tsv
+	rm -f ./cmp1.* ./con.* ./all_trees.* ./*.log ./*.rfdist ./*.ps ./*.ph ./Heuristic_result.txt ./*.pdf ./*.nex
 
 supertree:
 	./make_ph.sh

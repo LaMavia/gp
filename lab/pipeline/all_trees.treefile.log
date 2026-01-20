@@ -5,16 +5,16 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    nixos (AVX2, FMA3, 30 GB RAM)
 Command: /home/mavia/projectes/uni/gp/lab/04/iqtree-3.0.1-Linux/bin/iqtree3_intel -con ./all_trees.treefile ./con.treefile
-Seed:    264893 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Tue Jan 20 22:33:16 2026
+Seed:    608782 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Jan 20 23:48:48 2026
 Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
 
 HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
 HINT: -nt AUTO will automatically determine the best number of threads to use.
 
 Reading tree(s) file ./all_trees.treefile ...
-9 tree(s) loaded (0 rooted and 9 unrooted)
+10 tree(s) loaded (0 rooted and 10 unrooted)
 0 split(s) discarded because frequency <= 0.000
-136 splits found
+152 splits found
 Consensus tree written to ./con.treefile
-Date and Time: Tue Jan 20 22:33:16 2026
+Date and Time: Tue Jan 20 23:48:48 2026
