@@ -1,0 +1,23 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    nixos (AVX2, FMA3, 30 GB RAM)
+Command: /home/mavia/projectes/uni/gp/lab/04/iqtree-3.0.1-Linux/bin/iqtree3_intel -sup ./all_trees.treefile ./con.treefile
+Seed:    598294 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue Jan 20 11:30:35 2026
+Kernel:  AVX+FMA - 1 threads (16 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 16 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading tree ./all_trees.treefile ...
+unrooted tree detected
+Reading tree(s) file ./con.treefile ...
+1 tree(s) loaded (0 rooted and 1 unrooted)
+Rescaling split weights by 100.000
+49 splits found
+Creating bootstrap support values...
+Tree with assigned support written to ./con.treefile.suptree
+Date and Time: Tue Jan 20 11:30:35 2026

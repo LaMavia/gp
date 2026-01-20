@@ -9,11 +9,17 @@ clean:
 
 trees:
 	find . -depth -maxdepth 1 -name '*_rep_seq.afa.treefile' -print0 |\
-		parallel --plus -0 \
+		parallel --progress --plus -0 \
 		python3 ./substitute_family_trees.py \
 			{} \
 			./clusters/{%_rep_seq.afa.treefile}_all_seqs \
 			./trees
+
+	find ./trees -name '*.treefile' -print0 |\
+		parallel --progress -0 \
+		python3 ./extend_tree.py ./genomes.csv {}
+
+	cat ./trees/*.treefile > all_trees.treefile
 
 sup_trees:
 	find . -name '*_rep_seq.afa' -print0 |\

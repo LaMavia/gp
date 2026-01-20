@@ -5,7 +5,7 @@ import sys
 
 def get_tree(file_path: str) -> tuple[str, str]:
     with open(file_path, "r") as f:
-        return Path(file_path).stem.split(".")[0], f.read()[:-1]
+        return Path(file_path).stem.split(".")[0], f.read().strip()[:-1]
 
 
 def get_family_trees(family_tree_file_dir: str) -> dict[str, str]:
@@ -22,10 +22,12 @@ def main(sup_tree_file: str, family_tree_file_dir: str, dist_dir: str):
     family_trees = get_family_trees(family_tree_file_dir)
 
     for gene, gene_tree in family_trees.items():
+        if gene_tree == f"({gene}:1)":
+            continue
         sup_tree = sup_tree.replace(f"{gene}:", f"{gene_tree}:")
 
     with open(f"{dist_dir}/{name}.treefile", "w") as f:
-        f.write(sup_tree)
+        f.write(sup_tree + ";")
 
 
 if __name__ == "__main__":
