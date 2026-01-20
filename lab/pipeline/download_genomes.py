@@ -73,6 +73,7 @@ GENE_NAME_MAP_RAW = {
         "nucleocapsid protein (N)",
         "nucleocapsid phosphoprotein",
     },
+    "HE": {"HE", "hemmaglutinin-esterase", "HE protein"},
 }
 
 SUB_FEATURES_RAW = {
