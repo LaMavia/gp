@@ -1,1 +1,0 @@
-(((((MunCoV_HKU13,(ThCoV_HKU12,BuCoV_HKU11)),(SW1,(TCoV,IBV))),((Rh-BatCoV-HKU2,((TGEV,FCoV),PRCV)),((HCoV-NL63,HCoV-229E),((PEDV,Sc-BatCoV_512),((Mi-BatCoV_1B,Mi-BatCoV_1A),Mi-BatCoV-HKU8))))),((Ty-BatCoV-HKU4,Pi-BatCoV-HKU5),((SARSr-Rh-BatCoV,SARSr-CoV),Ro-BatCoV-HKU9))),HCoV-HKU1,(MHV,((ECoV,PHEV),(HCoV-OC43,BCoV))));	
