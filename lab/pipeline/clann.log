@@ -21,7 +21,7 @@ Reading Newhampshire (Phylip) format source trees
 	Source tree summmary:
 
 	----------------------------------------------------
-		Number of input trees: 10
+		Number of input trees: 8
 		Number of unique taxa: 28
 		Total unrooted trees in Supertree space?
 			2.98023e+33
@@ -30,34 +30,34 @@ Reading Newhampshire (Phylip) format source trees
 
 		number	Taxa name           		Occurrence
 
-		0   	Rh-BatCoV-HKU2                	10
-		1   	ThCoV_HKU12                   	10
-		2   	BuCoV_HKU11                   	10
-		3   	MunCoV_HKU13                  	10
-		4   	TCoV                          	10
-		5   	IBV                           	10
-		6   	SW1                           	10
-		7   	HCoV-HKU1                     	10
-		8   	HCoV-OC43                     	10
-		9   	PHEV                          	10
-		10  	ECoV                          	10
-		11  	BCoV                          	10
-		12  	MHV                           	10
-		13  	SARSr-Rh-BatCoV               	10
-		14  	SARSr-CoV                     	10
-		15  	Ro-BatCoV-HKU9                	10
-		16  	Pi-BatCoV-HKU5                	10
-		17  	Ty-BatCoV-HKU4                	10
-		18  	TGEV                          	10
-		19  	FCoV                          	10
-		20  	PRCV                          	10
-		21  	HCoV-NL63                     	10
-		22  	HCoV-229E                     	10
-		23  	PEDV                          	10
-		24  	Sc-BatCoV_512                 	10
-		25  	Mi-BatCoV_1B                  	10
-		26  	Mi-BatCoV_1A                  	10
-		27  	Mi-BatCoV-HKU8                	10
+		0   	Rh-BatCoV-HKU2                	8
+		1   	ThCoV_HKU12                   	8
+		2   	BuCoV_HKU11                   	8
+		3   	MunCoV_HKU13                  	8
+		4   	TCoV                          	8
+		5   	IBV                           	8
+		6   	SW1                           	8
+		7   	HCoV-HKU1                     	8
+		8   	HCoV-OC43                     	8
+		9   	PHEV                          	8
+		10  	ECoV                          	8
+		11  	BCoV                          	8
+		12  	MHV                           	8
+		13  	SARSr-Rh-BatCoV               	8
+		14  	SARSr-CoV                     	8
+		15  	Ro-BatCoV-HKU9                	8
+		16  	Pi-BatCoV-HKU5                	8
+		17  	Ty-BatCoV-HKU4                	8
+		18  	TGEV                          	8
+		19  	FCoV                          	8
+		20  	PRCV                          	8
+		21  	HCoV-NL63                     	8
+		22  	HCoV-229E                     	8
+		23  	PEDV                          	8
+		24  	Sc-BatCoV_512                 	8
+		25  	Mi-BatCoV_1B                  	8
+		26  	Mi-BatCoV_1A                  	8
+		27  	Mi-BatCoV-HKU8                	8
 
 
 	Co-occurrence summary:
@@ -66,153 +66,152 @@ Reading Newhampshire (Phylip) format source trees
       
 		      0     1     2     3     4     5     6     7     8     9     10    11    
 		0     -     
-		1     10    -     
-		2     10    10    -     
-		3     10    10    10    -     
-		4     10    10    10    10    -     
-		5     10    10    10    10    10    -     
-		6     10    10    10    10    10    10    -     
-		7     10    10    10    10    10    10    10    -     
-		8     10    10    10    10    10    10    10    10    -     
-		9     10    10    10    10    10    10    10    10    10    -     
-		10    10    10    10    10    10    10    10    10    10    10    -     
-		11    10    10    10    10    10    10    10    10    10    10    10    -     
-		12    10    10    10    10    10    10    10    10    10    10    10    10    
-		13    10    10    10    10    10    10    10    10    10    10    10    10    
-		14    10    10    10    10    10    10    10    10    10    10    10    10    
-		15    10    10    10    10    10    10    10    10    10    10    10    10    
-		16    10    10    10    10    10    10    10    10    10    10    10    10    
-		17    10    10    10    10    10    10    10    10    10    10    10    10    
-		18    10    10    10    10    10    10    10    10    10    10    10    10    
-		19    10    10    10    10    10    10    10    10    10    10    10    10    
-		20    10    10    10    10    10    10    10    10    10    10    10    10    
-		21    10    10    10    10    10    10    10    10    10    10    10    10    
-		22    10    10    10    10    10    10    10    10    10    10    10    10    
-		23    10    10    10    10    10    10    10    10    10    10    10    10    
-		24    10    10    10    10    10    10    10    10    10    10    10    10    
-		25    10    10    10    10    10    10    10    10    10    10    10    10    
-		26    10    10    10    10    10    10    10    10    10    10    10    10    
-		27    10    10    10    10    10    10    10    10    10    10    10    10    
+		1     8     -     
+		2     8     8     -     
+		3     8     8     8     -     
+		4     8     8     8     8     -     
+		5     8     8     8     8     8     -     
+		6     8     8     8     8     8     8     -     
+		7     8     8     8     8     8     8     8     -     
+		8     8     8     8     8     8     8     8     8     -     
+		9     8     8     8     8     8     8     8     8     8     -     
+		10    8     8     8     8     8     8     8     8     8     8     -     
+		11    8     8     8     8     8     8     8     8     8     8     8     -     
+		12    8     8     8     8     8     8     8     8     8     8     8     8     
+		13    8     8     8     8     8     8     8     8     8     8     8     8     
+		14    8     8     8     8     8     8     8     8     8     8     8     8     
+		15    8     8     8     8     8     8     8     8     8     8     8     8     
+		16    8     8     8     8     8     8     8     8     8     8     8     8     
+		17    8     8     8     8     8     8     8     8     8     8     8     8     
+		18    8     8     8     8     8     8     8     8     8     8     8     8     
+		19    8     8     8     8     8     8     8     8     8     8     8     8     
+		20    8     8     8     8     8     8     8     8     8     8     8     8     
+		21    8     8     8     8     8     8     8     8     8     8     8     8     
+		22    8     8     8     8     8     8     8     8     8     8     8     8     
+		23    8     8     8     8     8     8     8     8     8     8     8     8     
+		24    8     8     8     8     8     8     8     8     8     8     8     8     
+		25    8     8     8     8     8     8     8     8     8     8     8     8     
+		26    8     8     8     8     8     8     8     8     8     8     8     8     
+		27    8     8     8     8     8     8     8     8     8     8     8     8     
 
 	Co-occurence summary continued:
 		      12    13    14    15    16    17    18    19    20    21    22    23    
 		12    -     
-		13    10    -     
-		14    10    10    -     
-		15    10    10    10    -     
-		16    10    10    10    10    -     
-		17    10    10    10    10    10    -     
-		18    10    10    10    10    10    10    -     
-		19    10    10    10    10    10    10    10    -     
-		20    10    10    10    10    10    10    10    10    -     
-		21    10    10    10    10    10    10    10    10    10    -     
-		22    10    10    10    10    10    10    10    10    10    10    -     
-		23    10    10    10    10    10    10    10    10    10    10    10    -     
-		24    10    10    10    10    10    10    10    10    10    10    10    10    
-		25    10    10    10    10    10    10    10    10    10    10    10    10    
-		26    10    10    10    10    10    10    10    10    10    10    10    10    
-		27    10    10    10    10    10    10    10    10    10    10    10    10    
+		13    8     -     
+		14    8     8     -     
+		15    8     8     8     -     
+		16    8     8     8     8     -     
+		17    8     8     8     8     8     -     
+		18    8     8     8     8     8     8     -     
+		19    8     8     8     8     8     8     8     -     
+		20    8     8     8     8     8     8     8     8     -     
+		21    8     8     8     8     8     8     8     8     8     -     
+		22    8     8     8     8     8     8     8     8     8     8     -     
+		23    8     8     8     8     8     8     8     8     8     8     8     -     
+		24    8     8     8     8     8     8     8     8     8     8     8     8     
+		25    8     8     8     8     8     8     8     8     8     8     8     8     
+		26    8     8     8     8     8     8     8     8     8     8     8     8     
+		27    8     8     8     8     8     8     8     8     8     8     8     8     
 
 	Co-occurence summary continued:
 		      24    25    26    27    
 		24    -     
-		25    10    -     
-		26    10    10    -     
-		27    10    10    10    -     
+		25    8     -     
+		26    8     8     -     
+		27    8     8     8     -     
 
 
 	Source tree size summary:
 
   num leaves
-	28  |======================================== (10)
+	28  |======================================== (8)
 
 
 
-	Number of single copy trees:	10
+	Number of single copy trees:	8
 	number of multicopy trees:	0
 	----------------------------------------------------
-clann> set criterion=sfit;
-Scoring criterion set to maximum split fit (SFIT)
-clann> hs nreps=5 nsteps=20 sample=1000 swap=nni;
+clann> set criterion=dfit;
+clann> hs nreps=5 nsteps=20 sample=1000 swap=spr;
 
 
 Heuristic Search settings:
-	Criterion = Maximum split fit (SFIT)
-	Heuristic search algorithm = Nearest Neighbor Interchange (NNI)
+	Criterion = Most Similar Supertree (dfit)
+	Heuristic search algorithm = Sub-tree Pruning and Regrafting (SPR)
 	Maximum Number of Steps (nsteps) = 20
 	Maximum Number of Swaps (maxswaps) = 1000000
 	Number of repetitions of Heuristic search = 5
-	Weighting Scheme = splits
+	Weighting Scheme = comparisons
 	Starting trees = neighbor-joining tree from Average consensus distances
 	Missing data estimated using  4 point condition distances
 	Output file = Heuristic_result.txt
 
 Heuristic search progress indicator:
-Repetition 1 of 5:=
-Repetition 2 of 5:
-Repetition 3 of 5:
-Repetition 4 of 5:=
-Repetition 5 of 5:
-Number of topologies tried: 34914
+Repetition 1 of 5:=============
+Repetition 2 of 5:=============
+Repetition 3 of 5:=================
+Repetition 4 of 5:============
+Repetition 5 of 5:=============
+Number of topologies tried: 298644
                                                                                 
                                                                                 
-                                                       +---- SARSr-Rh-BatCoV    
-                                                  +----|                        
-                                              +---|    +---- SARSr-CoV          
-                                              |   |                             
-                  +---------------------------|   +--------- Ro-BatCoV-HKU9     
-                  |                           |                                 
-                  |                           |        +---- Pi-BatCoV-HKU5     
-                  |                           +--------|                        
-                  |                                    +---- Ty-BatCoV-HKU4     
-                  |                                                             
-                  |                                    +---- TCoV               
-             +----|                               +----|                        
-             |    |    +--------------------------|    +---- IBV                
-             |    |    |                          |                             
-             |    |    |                          +--------- SW1                
-             |    |    |                                                        
-             |    |    |                          +--------- ThCoV_HKU12        
-             |    |    |   +----------------------|                             
-             |    +----|   |                      |    +---- BuCoV_HKU11        
-             |         |   |                      +----|                        
-             |         |   |                           +---- MunCoV_HKU13       
-             |         |   |                                                    
-             |         |   |        +----------------------- Rh-BatCoV-HKU2     
-             |         |   |        |                                           
-             |         |   |        |                  +---- HCoV-NL63          
-             |         +---|    +---|    +-------------|                        
-             |             |    |   |    |             +---- HCoV-229E          
-         +---|             |    |   |    |                                      
-         |   |             |    |   +----|        +----+---- Mi-BatCoV_1B       
-         |   |             |    |        |        |    |                        
-         |   |             |    |        |    +---|    +---- Mi-BatCoV_1A       
-         |   |             |    |        |    |   |                             
-         |   |             +----|        +----|   +--------- Mi-BatCoV-HKU8     
-         |   |                  |             |                                 
-         |   |                  |             |        +---- PEDV               
-         |   |                  |             +--------|                        
-    +----|   |                  |                      +---- Sc-BatCoV_512      
-    |    |   |                  |                                               
-    |    |   |                  |                      +---- TGEV               
-    |    |   |                  |                 +----|                        
-    |    |   |                  +-----------------|    +---- FCoV               
-    |    |   |                                    |                             
-+---|    |   |                                    +--------- PRCV               
-|   |    |   |                                                                  
-|   |    |   +---------------------------------------------- MHV                
-|   |    |                                                                      
-|   |    +-------------------------------------------------- HCoV-HKU1          
-|   |                                                                           
-|   +------------------------------------------------------- ECoV               
+                                                  +--------- ThCoV_HKU12        
+                                        +---------|                             
+                              +---------|         +--------- MunCoV_HKU13       
+                              |         |                                       
+                              |         +------------------- BuCoV_HKU11        
++-----------------------------|                                                 
+|                             |                   +--------- TCoV               
+|                             |         +---------|                             
+|                             +---------|         +--------- IBV                
+|                                       |                                       
+|                                       +------------------- SW1                
 |                                                                               
-|----------------------------------------------------------- PHEV               
+|                                                 +--------- FCoV               
+|                                       +---------|                             
+|         +-----------------------------|         +--------- TGEV               
+|         |                             |                                       
+|         |                             +------------------- PRCV               
+|         |                                                                     
+|         |                                       +--------- Mi-BatCoV_1A       
+|         |                             +---------|                             
+|---------|                   +---------|         +--------- Mi-BatCoV_1B       
+|         |                   |         |                                       
+|         |         +---------|         +------------------- Mi-BatCoV-HKU8     
+|         |         |         |                                                 
+|         |         |         +----------------------------- Rh-BatCoV-HKU2     
+|         +---------|                                                           
+|                   |                             +--------- HCoV-229E          
+|                   |                   +---------|                             
+|                   +-------------------|         +--------- HCoV-NL63          
+|                                       |                                       
+|                                       |         +--------- PEDV               
+|                                       +---------|                             
+|                                                 +--------- Sc-BatCoV_512      
 |                                                                               
-|                                                      +---- HCoV-OC43          
-+------------------------------------------------------|                        
-                                                       +---- BCoV               
+|                                                 +--------- HCoV-HKU1          
+|                             +-------------------|                             
+|                             |                   +--------- MHV                
+|                             |                                                 
+|                   +---------|                   +--------- HCoV-OC43          
+|                   |         |         +---------|                             
+|                   |         |         |         +--------- PHEV               
+|                   |         +---------|                                       
+|                   |                   |         +--------- BCoV               
+|                   |                   +---------|                             
++-------------------|                             +--------- ECoV               
+                    |                                                           
+                    |                   +------------------- Ro-BatCoV-HKU9     
+                    |         +---------|                                       
+                    |         |         |         +--------- SARSr-CoV          
+                    |         |         +---------|                             
+                    +---------|                   +--------- SARSr-Rh-BatCoV    
+                              |                                                 
+                              |                   +--------- Pi-BatCoV-HKU5     
+                              +-------------------|                             
+                                                  +--------- Ty-BatCoV-HKU4     
 
-Supertree 1 of 1 score = 19.917099
+Supertree 1 of 1 score = 13.835979
 
-Time taken: 7 seconds
+Time taken: 7 Minutes 47 seconds
 

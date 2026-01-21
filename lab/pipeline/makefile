@@ -12,6 +12,7 @@ supertree:
 	./make_ph.sh
 	clann -ln -c clann_commands.txt
 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
+	sed -i '2,$$ d' ./Heuristic_result.txt
 	Rscript ./rf.r ./Heuristic_result.txt ./publication.treefile ./sup.pdf "Supertree vs. Publication"
 
 consensus: all_trees.treefile

@@ -33,7 +33,12 @@ def main(genomes_path: str, tree_file_path: str):
     if len(missing_taxa) > 0:
         with open(tree_file_path, "w") as f:
             f.write(
-                (new_tree := f"({full_tree_of_leaves(list(missing_taxa))}:1,{tree}:1)")
+                # (new_tree := f"({full_tree_of_leaves(list(missing_taxa))}:1,{tree}:1)")
+                (
+                    new_tree := f"(({','.join(f'{t}:1' for t in missing_taxa)}):1,{
+                        tree
+                    }:1)"
+                )
                 + ";"
             )
 

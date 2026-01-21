@@ -14,10 +14,10 @@ VisualizeMatching(
                   con_tree,
                   tt_tree
 )
-title(args[4], line = 3)
-sprintf("normalised RF dist: %f", RobinsonFoulds(
+title(main=args[4], sub=sprintf("normalised RF dist: %f", RobinsonFoulds(
                      con_tree,
                      tt_tree,
                      normalize = TRUE
-                     ))
+                     )), line = 3)
+
 
