@@ -30,34 +30,34 @@ Reading Newhampshire (Phylip) format source trees
 
 		number	Taxa name           		Occurrence
 
-		0   	ThCoV_HKU12                   	10
-		1   	BuCoV_HKU11                   	10
-		2   	MunCoV_HKU13                  	10
-		3   	HCoV-229E                     	10
-		4   	Mi-BatCoV_1B                  	10
-		5   	Mi-BatCoV_1A                  	10
-		6   	FCoV                          	10
-		7   	TGEV                          	10
-		8   	PRCV                          	10
-		9   	Rh-BatCoV-HKU2                	10
-		10  	Mi-BatCoV-HKU8                	10
-		11  	PEDV                          	10
-		12  	Sc-BatCoV_512                 	10
-		13  	HCoV-NL63                     	10
+		0   	Rh-BatCoV-HKU2                	10
+		1   	ThCoV_HKU12                   	10
+		2   	BuCoV_HKU11                   	10
+		3   	MunCoV_HKU13                  	10
+		4   	TCoV                          	10
+		5   	IBV                           	10
+		6   	SW1                           	10
+		7   	HCoV-HKU1                     	10
+		8   	HCoV-OC43                     	10
+		9   	PHEV                          	10
+		10  	ECoV                          	10
+		11  	BCoV                          	10
+		12  	MHV                           	10
+		13  	SARSr-Rh-BatCoV               	10
 		14  	SARSr-CoV                     	10
-		15  	SARSr-Rh-BatCoV               	10
-		16  	Ro-BatCoV-HKU9                	10
-		17  	Pi-BatCoV-HKU5                	10
-		18  	Ty-BatCoV-HKU4                	10
-		19  	MHV                           	10
-		20  	HCoV-OC43                     	10
-		21  	PHEV                          	10
-		22  	ECoV                          	10
-		23  	BCoV                          	10
-		24  	HCoV-HKU1                     	10
-		25  	SW1                           	10
-		26  	TCoV                          	10
-		27  	IBV                           	10
+		15  	Ro-BatCoV-HKU9                	10
+		16  	Pi-BatCoV-HKU5                	10
+		17  	Ty-BatCoV-HKU4                	10
+		18  	TGEV                          	10
+		19  	FCoV                          	10
+		20  	PRCV                          	10
+		21  	HCoV-NL63                     	10
+		22  	HCoV-229E                     	10
+		23  	PEDV                          	10
+		24  	Sc-BatCoV_512                 	10
+		25  	Mi-BatCoV_1B                  	10
+		26  	Mi-BatCoV_1A                  	10
+		27  	Mi-BatCoV-HKU8                	10
 
 
 	Co-occurrence summary:
@@ -133,12 +133,12 @@ Reading Newhampshire (Phylip) format source trees
 	----------------------------------------------------
 clann> set criterion=sfit;
 Scoring criterion set to maximum split fit (SFIT)
-clann> hs nreps=5 nsteps=20 sample=1000 swap=spr;
+clann> hs nreps=5 nsteps=20 sample=1000 swap=nni;
 
 
 Heuristic Search settings:
 	Criterion = Maximum split fit (SFIT)
-	Heuristic search algorithm = Sub-tree Pruning and Regrafting (SPR)
+	Heuristic search algorithm = Nearest Neighbor Interchange (NNI)
 	Maximum Number of Steps (nsteps) = 20
 	Maximum Number of Swaps (maxswaps) = 1000000
 	Number of repetitions of Heuristic search = 5
@@ -149,70 +149,70 @@ Heuristic Search settings:
 
 Heuristic search progress indicator:
 Repetition 1 of 5:=
-Repetition 2 of 5:==
-Repetition 3 of 5:=
+Repetition 2 of 5:
+Repetition 3 of 5:
 Repetition 4 of 5:=
-Repetition 5 of 5:=
-Number of topologies tried: 182422
+Repetition 5 of 5:
+Number of topologies tried: 34914
                                                                                 
                                                                                 
-                                                     +------ HCoV-229E          
-+----------------------------------------------------|                          
-|                                                    +------ HCoV-NL63          
+                                                       +---- SARSr-Rh-BatCoV    
+                                                  +----|                        
+                                              +---|    +---- SARSr-CoV          
+                                              |   |                             
+                  +---------------------------|   +--------- Ro-BatCoV-HKU9     
+                  |                           |                                 
+                  |                           |        +---- Pi-BatCoV-HKU5     
+                  |                           +--------|                        
+                  |                                    +---- Ty-BatCoV-HKU4     
+                  |                                                             
+                  |                                    +---- TCoV               
+             +----|                               +----|                        
+             |    |    +--------------------------|    +---- IBV                
+             |    |    |                          |                             
+             |    |    |                          +--------- SW1                
+             |    |    |                                                        
+             |    |    |                          +--------- ThCoV_HKU12        
+             |    |    |   +----------------------|                             
+             |    +----|   |                      |    +---- BuCoV_HKU11        
+             |         |   |                      +----|                        
+             |         |   |                           +---- MunCoV_HKU13       
+             |         |   |                                                    
+             |         |   |        +----------------------- Rh-BatCoV-HKU2     
+             |         |   |        |                                           
+             |         |   |        |                  +---- HCoV-NL63          
+             |         +---|    +---|    +-------------|                        
+             |             |    |   |    |             +---- HCoV-229E          
+         +---|             |    |   |    |                                      
+         |   |             |    |   +----|        +----+---- Mi-BatCoV_1B       
+         |   |             |    |        |        |    |                        
+         |   |             |    |        |    +---|    +---- Mi-BatCoV_1A       
+         |   |             |    |        |    |   |                             
+         |   |             +----|        +----|   +--------- Mi-BatCoV-HKU8     
+         |   |                  |             |                                 
+         |   |                  |             |        +---- PEDV               
+         |   |                  |             +--------|                        
+    +----|   |                  |                      +---- Sc-BatCoV_512      
+    |    |   |                  |                                               
+    |    |   |                  |                      +---- TGEV               
+    |    |   |                  |                 +----|                        
+    |    |   |                  +-----------------|    +---- FCoV               
+    |    |   |                                    |                             
++---|    |   |                                    +--------- PRCV               
+|   |    |   |                                                                  
+|   |    |   +---------------------------------------------- MHV                
+|   |    |                                                                      
+|   |    +-------------------------------------------------- HCoV-HKU1          
+|   |                                                                           
+|   +------------------------------------------------------- ECoV               
 |                                                                               
-|                                                    +------ PEDV               
-|                                       +------------|                          
-|                                       |            +------ Sc-BatCoV_512      
-|                                +------|                                       
-|                                |      |            +------ Mi-BatCoV_1B       
-|                                |      |     +------|                          
-|--------------------------------|      +-----|      +------ Mi-BatCoV_1A       
-|                                |            |                                 
-|                                |            +------------- Mi-BatCoV-HKU8     
-|                                |                                              
-|                                +-------------------------- Rh-BatCoV-HKU2     
+|----------------------------------------------------------- PHEV               
 |                                                                               
-|                                             +------------- SW1                
-|                                       +-----|                                 
-|                                       |     |      +------ TCoV               
-|                                       |     +------|                          
-|            +--------------------------|            +------ IBV                
-|            |                          |                                       
-|            |                          |     +------------- ThCoV_HKU12        
-|            |                          +-----|                                 
-|            |                                |      +------ MunCoV_HKU13       
-|            |                                +------|                          
-|            |                                       +------ BuCoV_HKU11        
-|            |                                                                  
-|            |                                +------+------ SARSr-CoV          
-|     +------|                                |      |                          
-|     |      |                          +-----|      +------ SARSr-Rh-BatCoV    
-|     |      |                          |     |                                 
-|     |      |      +-------------------|     +------------- Ro-BatCoV-HKU9     
-|     |      |      |                   |                                       
-|     |      |      |                   |            +------ Pi-BatCoV-HKU5     
-|     |      |      |                   +------------|                          
-|     |      |      |                                +------ Ty-BatCoV-HKU4     
-|     |      |      |                                                           
-|     |      +------|            +-------------------------- MHV                
-|     |             |     +------|                                              
-+-----|             |     |      |      +------------------- ECoV               
-      |             |     |      +------|                                       
-      |             |     |             |     +------------- HCoV-OC43          
-      |             +-----|             +-----|                                 
-      |                   |                   |      +------ PHEV               
-      |                   |                   +------|                          
-      |                   |                          +------ BCoV               
-      |                   |                                                     
-      |                   +--------------------------------- HCoV-HKU1          
-      |                                                                         
-      |                                              +------ TGEV               
-      |                                       +------|                          
-      +---------------------------------------|      +------ FCoV               
-                                              |                                 
-                                              +------------- PRCV               
+|                                                      +---- HCoV-OC43          
++------------------------------------------------------|                        
+                                                       +---- BCoV               
 
-Supertree 1 of 1 score = 14.970726
+Supertree 1 of 1 score = 19.917099
 
-Time taken: 30 seconds
+Time taken: 7 seconds
 

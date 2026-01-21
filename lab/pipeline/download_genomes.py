@@ -227,6 +227,14 @@ def download_by_id(id: str):
                     )
                     or ""
                 )
+                translation = (
+                    find_assoc_exc(
+                        feature["GBFeature_quals"],
+                        [("GBQualifier_name", "translation")],
+                        "GBQualifier_value",
+                    )
+                    or ""
+                )
                 p, q = parse_location(location)
 
                 gene = (
@@ -243,7 +251,11 @@ def download_by_id(id: str):
                     genes.append(
                         (
                             gene,
-                            Seq.translate(nuc_seq[p : q + 1], stop_symbol="").lower(),
+                            translation.lower()
+                            if translation is not None
+                            else Seq.translate(
+                                nuc_seq[p : q + 1], stop_symbol=""
+                            ).lower(),
                             p,
                             q,
                         )
