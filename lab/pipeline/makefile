@@ -8,6 +8,9 @@ clean:
 	rm -f ./*.fasta ./*_cluster.tsv
 	rm -f ./*.afa* ./cmp1.* ./con.* ./all_trees.* ./*.log ./*.rfdist ./*.ps ./*.ph ./Heuristic_result.txt ./*.pdf ./*.nex
 
+zip:
+	zip zs438730.zip makefile ./*.sh ./*.py ./*.r ./genomes.csv ./publication.treefile ./raport/* ./*.nix ./clann_commands.txt
+
 supertree:
 	./make_ph.sh
 	clann -ln -c clann_commands.txt

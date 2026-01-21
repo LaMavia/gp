@@ -26,6 +26,7 @@
           requests
           ruff
           jupyter
+          vl-convert-python
         ]) ++ [
           (pkgs.callPackage ./clann.nix { })
         ];
