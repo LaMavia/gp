@@ -32,8 +32,11 @@ rule clusters:
   shell:
     """
 		mmseqs easy-cluster {input} protein tmp \
-			--min-seq-id 0.5 \
-			--cov-mode 1\
+			--min-seq-id 0.3 \
+			--cov-mode 3\
 			-v 1\
-			-c 0.8
+			-c 0.7
+		rm -f ./clusters/*
+		python3 ./spread_cluster_sequences.py ./taxa.csv ./clusters ./protein_all_seqs.fasta
+		python3 ./cluster_hist.py ./cluster_sizes.txt
     """

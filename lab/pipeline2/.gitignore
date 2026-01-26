@@ -5,3 +5,4 @@ protein.faa
 protein_*
 *.txt
 .snakemake
+clusters
