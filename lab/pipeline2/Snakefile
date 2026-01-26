@@ -1,0 +1,39 @@
+envvars:
+  "NCBI_API_KEY"
+
+rule proteom_accessions:
+  input:
+    "taxa.csv"
+  output:
+    "tax_ids.txt"
+  shell:
+    "cat {input} | awk -F, 'NR>1 {{ print $2 }}' > {output}"
+
+rule ncbi_data:
+  input:
+    "tax_ids.txt"
+  output:
+    "protein.faa"
+  params:
+    api_key=os.environ['NCBI_API_KEY']
+  shell:
+    """
+    rm -f ./ncbi_dataset.zip
+    datasets --api-key {params.api_key} download genome accession --inputfile {input} --include protein 
+    bash -c 'unzip -o ./ncbi_dataset.zip *.faa'
+    cat ncbi_dataset/data/**/*.faa > {output}
+    # rm -rf ./ncbi_dataset
+    # rm -f ./ncbi_dataset.zip
+    """
+
+rule clusters:
+  input:
+    "protein.faa"
+  shell:
+    """
+		mmseqs easy-cluster {input} protein tmp \
+			--min-seq-id 0.5 \
+			--cov-mode 1\
+			-v 1\
+			-c 0.8
+    """

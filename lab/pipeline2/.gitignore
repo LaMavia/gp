@@ -1,2 +1,7 @@
 .env
 nsq
+tmp/*
+protein.faa
+protein_*
+*.txt
+.snakemake
