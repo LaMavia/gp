@@ -2,9 +2,7 @@ from sys import argv
 import pandas as pd
 import re
 from collections import deque
-import multiprocessing as mp
-from tqdm import tqdm
-from tqdm.contrib.concurrent import process_map  # or thread_map
+from tqdm.contrib.concurrent import thread_map
 
 taxon_regex = re.compile(r".*\[([^\]]*)\]$")
 
@@ -42,8 +40,6 @@ def process_file(datum: tuple[int, str]):
         for taxon, proteom in taxon_proteon_map.items():
             f.write(f">{taxon.replace(' ', '_')}\n{proteom}\n")
 
-    print(f"[{file}] OK")
-
     return taxon_proteon_map
 
 
@@ -55,12 +51,8 @@ def file_length(file: str):
 def main(taxa_file: str, files: list[str]):
     expected_num_taxons = len(set(pd.read_csv(taxa_file)["name"]))
 
-    vs = process_map(
+    thread_map(
         process_file, [(expected_num_taxons, file) for file in files], max_workers=16
-    )
-    print(
-        *sorted([sorted(list(v.keys())) for v in vs if v is not None], key=len),
-        sep="\n\n",
     )
 
 
