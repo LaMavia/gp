@@ -3,8 +3,8 @@ library(TreeDist)
 # args: result_tree, publication_tree, output_file, title
 
 args = commandArgs(trailingOnly=TRUE)
-con_tree <- ape::read.tree(args[1])
-tt_tree <- ape::read.tree(args[2])
+con_tree <- ape::root(ape::read.tree(args[1]), outgroup="Ustilago hordei")
+tt_tree <- ape::root(ape::read.tree(args[2]), outgroup="Ustilago hordei")
 
 # con_tree
 #

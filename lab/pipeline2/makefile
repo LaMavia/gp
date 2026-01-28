@@ -5,7 +5,7 @@ CLUSTERS_DIR = ./clusters
 all: $(CLUSTERS_DIR)/%.treefile
 
 tax_idx.txt: taxa.csv
-	cat $^ | awk -F, 'NR>1 {{ print $$2 }}' > $@
+	cat $^ | awk -F, 'NR>1 {{ print $$3 }}' > $@
 
 protein.faa: tax_idx.txt
 	rm -f ./ncbi_dataset.zip
@@ -46,6 +46,9 @@ all_orth_trees.treefile: # $(CLUSTERS_DIR)/%.treefile
 
 orth_consensus.result.treefile: all_orth_trees.treefile
 	iqtree3 -T AUTO --sup-min 0.5 -con $< $@
+
+%.renamed.treefile: %.result.treefile taxa.csv 
+	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
 
 %.comparison.pdf: %.result.treefile publication.treefile 
 	Rscript ./rf.r $^ $@ $*

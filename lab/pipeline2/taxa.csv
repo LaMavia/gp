@@ -1,16 +1,24 @@
-name,accession_id
-Ascosphaera apis,GCA_001636715.1	
-Ustilago hordei,GCA_900519145.1
-Sporobolomyces roseus,GCA_050403445.1
-Cryptococcus neoformans,GCA_000149245.3
-Coprinopsis cinerea,GCA_000182895.1
-Schizophyllum commune,GCA_000143185.2
-Aureobasidium pullulans,GCA_000721785.1
-Pneumocystis carinii,GCA_001477545.1
-Kluyveromyces dobzhanskii,GCA_000820885.1
-Kluyveromyces marxianus var. marxianus,GCA_001417885.1
-Saccharomyces cerevisiae,GCA_000146045.2
-Zygosaccharomyces rouxii,GCA_000026365.1
-Hanseniaspora uvarum,GCA_050947715.1
-Clavispora lusitaniae,GCA_014636115.1
-Wickerhamomyces anomalus,GCA_001661255.1
+name,seqname,accession_id
+|  Ascosphaera apis,Ascosphaera_apis_ARSEF_7405,GCA_001636715.1	
+|  Ustilago hordei,Ustilago_hordei,GCA_900519145.1
+|  Sporobolomyces roseus,Sporobolomyces_roseus,GCA_050403445.1
+|  Cryptococcus neoformans,Cryptococcus_neoformans_H99,GCA_000149245.3
+|  Coprinopsis cinerea,Coprinopsis_cinerea_okayama7_130,GCA_000182895.1
+|  Schizophyllum commune,Schizophyllum_commune_H4-8,GCA_000143185.2
+|  Rhodotorula glutinis,Rhodotorula glutinis,GCA_050403145.1
+|  Aureobasidium pullulans,Aureobasidium_pullulans_EXF-150,GCA_000721785.1
+|  Pneumocystis carinii,Pneumocystis_carinii_B80,GCA_001477545.1
+|  Schizosaccharomyces pombe,Schizosaccharomyces pombe,GCA_000002945.3
+|  Kluyveromyces dobzhanskii,Kluyveromyces_dobzhanskii_CBS_2104,GCA_000820885.1
+|  Kluyveromyces marxianus var. marxianus,Kluyveromyces_marxianus_DMKU3-1042,GCA_001417885.1
+|  Saccharomyces cerevisiae,Saccharomyces_cerevisiae_S288C,GCA_000146045.2
+|  Zygosaccharomyces rouxii,Zygosaccharomyces_rouxii,GCA_000026365.1
+|  Hanseniaspora uvarum,Hanseniaspora_uvarum,GCA_050947715.1
+|  Clavispora lusitaniae,Clavispora_lusitaniae,GCA_014636115.1
+|  Candida albicans,Candida albicans SC5314,GCA_000182965.3
+|  Debaryomyces hansenii,Debaryomyces hansenii CBS767,GCA_000006445.2
+|  Brettanomyces bruxellensis,Brettanomyces bruxellensis,GCA_011074885.2
+|  Metschnikowia bicuspidata,Metschnikowia bicuspidata var. bicuspidata NRRL YB-4993,GCA_001664035.1
+
+
+
