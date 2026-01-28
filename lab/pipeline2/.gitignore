@@ -6,3 +6,5 @@ protein_*
 *.txt
 .snakemake
 clusters
+*.treefile
+*.log
