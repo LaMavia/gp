@@ -2,24 +2,22 @@ library(TreeDist)
 
 # args: result_tree, publication_tree, output_file, title
 
+printf <- function(...) invisible(print(sprintf(...)))
+root <- function(...) ape::root(..., resolve.root=TRUE, outgroup="Ustilago_hordei")
+
 args = commandArgs(trailingOnly=TRUE)
-con_tree <- ape::root(ape::read.tree(args[1]), outgroup="Ustilago hordei")
-tt_tree <- ape::root(ape::read.tree(args[2]), outgroup="Ustilago hordei")
 
-# con_tree
-#
-# tt_tree
+con_tree <- root(ape::read.tree(args[1]))
+tt_tree <- root(ape::read.tree(args[2]))
 
-pdf(args[3], width = 12, height = 6)
+pdf(args[3], width = 12, height = 7)
 VisualizeMatching(
                   RobinsonFouldsMatching,
                   con_tree,
-                  tt_tree
+                  tt_tree,
 )
-title(main=args[4], sub=sprintf("normalised RF dist: %f", RobinsonFoulds(
-                     con_tree,
-                     tt_tree,
-                     normalize = TRUE
-                     )), line = 3)
+title(main=args[4], line=3)
+
+printf("nRF: %f, nJRF: %f", RobinsonFoulds(con_tree, tt_tree, normalize = TRUE), JaccardRobinsonFoulds(con_tree, tt_tree, normalize = TRUE))
 
 

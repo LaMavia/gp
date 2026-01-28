@@ -11,7 +11,7 @@ def main(taxa_file: str, tree_file: str, output_tree_file: str):
         tree = f.read()
 
     for seqname, name in zip(seqnames, names, strict=True):
-        tree = tree.replace(seqname, name)
+        tree = tree.replace(seqname, name.replace(" ", "_"))
 
     with open(output_tree_file, "w") as f:
         f.write(tree)
