@@ -12,7 +12,7 @@ tt_tree <- root(ape::read.tree(args[2]))
 
 pdf(args[3], width = 12, height = 7)
 VisualizeMatching(
-                  RobinsonFouldsMatching,
+                  JaccardRobinsonFoulds,
                   con_tree,
                   tt_tree,
 )

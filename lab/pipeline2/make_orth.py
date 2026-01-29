@@ -1,8 +1,9 @@
 from sys import argv
 import pandas as pd
 import re
-from collections import deque
+from collections import defaultdict, deque
 from tqdm.contrib.concurrent import thread_map
+from random import choice
 
 taxon_regex = re.compile(r".*\[([^\]]*)\]$")
 
@@ -11,7 +12,7 @@ def process_file(datum: tuple[int, str]):
     expected_num_taxons, file = datum
 
     out_file = f"{file}.orth"
-    taxon_proteon_map: dict[str, str] = {}
+    taxon_proteon_map: dict[str, list[str]] = defaultdict(list)
 
     if file_length(file) // 2 < expected_num_taxons:
         # print(f"[{file}] exiting, too short")
@@ -26,18 +27,33 @@ def process_file(datum: tuple[int, str]):
                 taxon = m.group(1)
 
             elif taxon is not None:
-                taxon_proteon_map[taxon] = (
-                    line.rstrip()
-                    if taxon_proteon_map.get(taxon) is None
-                    else max(taxon_proteon_map[taxon], line.rstrip(), key=len)
-                )
+                taxon_proteon_map[taxon].append(line.rstrip())
 
     if len(taxon_proteon_map) < expected_num_taxons:
         # print(f"[{file}] exiting, not 1-1")
         return taxon_proteon_map
 
+    result_taxon_proteon_map: dict[str, str] = {}
+    avg_len = None
+    n_taxons = 0
+    for taxon, proteoms in sorted(taxon_proteon_map.items(), key=lambda p: len(p[1])):
+        if avg_len is None:
+            proteom = choice(proteoms)
+            result_taxon_proteon_map[taxon] = proteom
+            avg_len = len(proteom)
+        else:
+            proteom = min(
+                [(abs(len(p) - avg_len), p) for p in proteoms], key=lambda p: p[0]
+            )[1]
+            result_taxon_proteon_map[taxon] = proteom
+            avg_len = avg_len * (n_taxons / (n_taxons + 1)) + len(proteom) / (
+                n_taxons + 1
+            )
+
+        n_taxons += 1
+
     with open(out_file, "w") as f:
-        for taxon, proteom in taxon_proteon_map.items():
+        for taxon, proteom in result_taxon_proteon_map.items():
             f.write(f">{taxon.replace(' ', '_')}\n{proteom}\n")
 
     return taxon_proteon_map

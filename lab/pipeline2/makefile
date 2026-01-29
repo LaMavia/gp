@@ -1,8 +1,8 @@
 CLUSTERS_DIR = ./clusters
+CON_ARGS = -B 1000
+# CON_ARGS = --fast
 
-.PHONY: clean comparison
-
-all: $(CLUSTERS_DIR)/%.treefile
+.PHONY: clean
 
 tax_idx.txt: taxa.csv
 	cat $^ | awk -F, 'NR>1 {{ print $$3 }}' > $@
@@ -25,16 +25,16 @@ $(CLUSTERS_DIR): protein.faa taxa.csv
 	python3 ./spread_cluster_sequences.py ./taxa.csv $(CLUSTERS_DIR) ./protein_all_seqs.fasta
 	python3 ./cluster_hist.py ./cluster_sizes.txt
 
-$(CLUSTERS_DIR)/%.orth: $(CLUSTERS_DIR) taxa.csv
+orthological_clusters: $(CLUSTERS_DIR) taxa.csv
 	find $(CLUSTERS_DIR) -name '*.faa' -print0 | python3 ./make_orth.py ./taxa.csv {}
 
-$(CLUSTERS_DIR)/%.afa: $(CLUSTERS_DIR)/%.orth
+aligned_orthological_clusters: orthological_clusters
 	find $(CLUSTERS_DIR) -name '*.orth' -print0 |\
 	parallel --progress -0 \
-	muscle -align {} -output {.}.afa
+	muscle -align {} -output {}.afa
 
 
-$(CLUSTERS_DIR)/%.treefile: $(CLUSTERS_DIR)/%.afa 
+trees: aligned_orthological_clusters 
 	find $(CLUSTERS_DIR) -name "*.afa" -print0 |\
 		parallel --progress -0 \
 		iqtree3 \
@@ -43,10 +43,9 @@ $(CLUSTERS_DIR)/%.treefile: $(CLUSTERS_DIR)/%.afa
 			--mset LG+I+G4,Q.PFAM+I+G4,Q.PFAM+F+I+G4,Q.YEAST+I+G4,Q.YEAST+F+I+G4 \
 			--cmin 3 \
 			--cmax 4 \
-			-B 1000 \
-			-s {}
+			-s {} $(CON_ARGS)
 
-all_orth_trees.treefile: $(CLUSTERS_DIR)/%.treefile
+all_orth_trees.treefile: trees
 	find $(CLUSTERS_DIR) -name '*.treefile' -print0 |\
 		parallel --progress -0 \
 		cat {} > $@
@@ -54,21 +53,15 @@ all_orth_trees.treefile: $(CLUSTERS_DIR)/%.treefile
 orth_consensus.result.treefile: all_orth_trees.treefile
 	iqtree3 -T AUTO --sup-min 0.0 -con $< $@
 
-%.renamed.treefile: %.result.treefile taxa.csv 
+orth_consensus.renamed.treefile: orth_consensus.result.treefile taxa.csv 
 	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
 
-%-publication.comparison.pdf: %.renamed.treefile publication.treefile 
-	Rscript ./rf.r $^ $@ $*
-
-%-ncbi.comparison.pdf: %.renamed.treefile ncbi.phy
-	Rscript ./rf.r $^ $@ $*
-
-comparison: 
-	rm -f *.comparison.pdf
-	$(MAKE) orth_consensus-publication.comparison.pdf
-	$(MAKE) orth_consensus-ncbi.comparison.pdf
+comparison: orth_consensus.renamed.treefile publication.treefile ncbi.phy
+	# rm -f *.comparison.pdf
+	Rscript ./rf.r orth_consensus.renamed.treefile publication.treefile orth_consensus-publication.comparison.pdf orth_consensus
+	Rscript ./rf.r orth_consensus.renamed.treefile ncbi.phy orth_consensus-ncbi.comparison.pdf orth_consensus
 
 clean:
 	rm -f tax_idx.txt protein.faa protein_all_seqs.fasta *.fasta *.*.treefile all*.treefile* cluster_sizes.* ncbi_dataset.zip protein_* *.log proteom_ids.txt md5sum.txt 
-	rm -rf $(CLUSTERS_DIR) ncbi_dataset
+	rm -rf $(CLUSTERS_DIR) ncbi_dataset tmp
 
