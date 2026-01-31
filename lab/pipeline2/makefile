@@ -18,9 +18,10 @@ protein.faa: tax_idx.txt
 $(CLUSTERS_DIR): protein.faa taxa.csv
 	mmseqs easy-cluster $< protein tmp \
 		--min-seq-id 0.5 \
-		--cov-mode 1\
+		--cov-mode 0 \
+		--cluster-mode 1 \
 		-v 1\
-		-c 0.8
+		-c 0.7
 	rm -rf $(CLUSTERS_DIR)
 	python3 ./spread_cluster_sequences.py ./taxa.csv $(CLUSTERS_DIR) ./protein_all_seqs.fasta
 	python3 ./cluster_hist.py ./cluster_sizes.txt
@@ -52,6 +53,12 @@ all_orth_trees.treefile: trees
 
 orth_consensus.result.treefile: all_orth_trees.treefile
 	iqtree3 -T AUTO --sup-min 0.0 -con $< $@
+
+orth_super.result.treefile: 
+	clann -ln -c clann_commands.txt
+	sed -i 's/\[.*\]//' ./Heuristic_result.txt
+	sed -i '2,$$ d' ./Heuristic_result.txt
+
 
 orth_consensus.renamed.treefile: orth_consensus.result.treefile taxa.csv 
 	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
