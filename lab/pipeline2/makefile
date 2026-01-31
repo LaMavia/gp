@@ -58,15 +58,21 @@ orth_super.result.treefile:
 	clann -ln -c clann_commands.txt
 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
 	sed -i '2,$$ d' ./Heuristic_result.txt
-
+	mv ./Heuristic_result.txt $@
 
 orth_consensus.renamed.treefile: orth_consensus.result.treefile taxa.csv 
 	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
 
-comparison: orth_consensus.renamed.treefile publication.treefile ncbi.phy
+orth_super.renamed.treefile: orth_super.result.treefile
+	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
+
+comparison: #orth_consensus.renamed.treefile publication.treefile ncbi.phy
 	# rm -f *.comparison.pdf
 	Rscript ./rf.r orth_consensus.renamed.treefile publication.treefile orth_consensus-publication.comparison.pdf orth_consensus
 	Rscript ./rf.r orth_consensus.renamed.treefile ncbi.phy orth_consensus-ncbi.comparison.pdf orth_consensus
+	
+	Rscript ./rf.r orth_super.renamed.treefile publication.treefile orth_super-publication.comparison.pdf orth_super
+	Rscript ./rf.r orth_super.renamed.treefile ncbi.phy orth_super-ncbi.comparison.pdf orth_super
 
 clean:
 	rm -f tax_idx.txt protein.faa protein_all_seqs.fasta *.fasta *.*.treefile all*.treefile* cluster_sizes.* ncbi_dataset.zip protein_* *.log proteom_ids.txt md5sum.txt 
