@@ -4,6 +4,7 @@ tmp/*
 protein.faa
 protein_*
 *.txt
+!clann_commands.txt
 .snakemake
 clusters
 *.treefile

@@ -1,0 +1,3 @@
+exe all_orth_trees.treefile;
+set criterion=dfit;
+hs nreps=5 nsteps=20 sample=1000 swap=spr;
