@@ -7,8 +7,8 @@ root <- function(...) ape::root(..., resolve.root=TRUE, outgroup="Ustilago_horde
 
 args = commandArgs(trailingOnly=TRUE)
 
-con_tree <- root(ape::read.tree(args[1]))
-tt_tree <- root(ape::read.tree(args[2]))
+con_tree <- ape::read.tree(args[1])
+tt_tree <- ape::read.tree(args[2])
 
 pdf(args[3], width = 12, height = 7)
 VisualizeMatching(
