@@ -14,7 +14,7 @@ TT_COMPARISONS = $(TT_TREES:%=%-tt.comparison.pdf)
 SUPER_JOINED_TREES = $(patsubst %,all_%_trees.treefile,orth)
 MISSING_TT_TAXONS = Rhodotorula_glutinis,Sporobolomyces_roseus
 
-.PHONY: clean
+.PHONY: clean zs438730.tar.gz
 
 all: clusters_dir aligned_orthological_clusters aligned_paralog_clusters trees comparisons
 
@@ -124,4 +124,10 @@ clean:
 	rm -f tax_idx.txt protein.faa protein_all_seqs.fasta *.fasta *.*.treefile all*.treefile* cluster_sizes.* ncbi_dataset.zip protein_* *.log proteom_ids.txt md5sum.txt 
 	rm -rf $(CLUSTERS_DIR) ncbi_dataset tmp
 
+gene_trees.treefile:
+	find $(CLUSTERS_DIR) -name  '*.treefile' -print0 |\
+		parallel --bar --eta -0 cat {} > $@
+
+zs438730.tar.gz: $(wildcard *.csv) orth_clann_commands.txt README.md makefile $(wildcard raport/*) $(wildcard *.nix) $(wildcard *.py) $(wildcard *.pdf) $(wildcard *.renamed.treefile) $(wildcard *.sh) 
+	GZIP=-9 tar -czf  $@ $^
 
