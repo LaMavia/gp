@@ -16,7 +16,7 @@ MISSING_TT_TAXONS = Rhodotorula_glutinis,Sporobolomyces_roseus
 
 .PHONY: clean zs438730.tar.gz
 
-all: clusters_dir aligned_orthological_clusters aligned_paralog_clusters trees comparisons
+all: clusters_dir aligned_orthological_clusters trees comparisons
 
 tax_idx.txt: taxa.csv
 	cat $^ | awk -F, 'NR>1 {{ print $$3 }}' > $@
@@ -48,13 +48,13 @@ aligned_orthological_clusters: orthological_clusters
 	parallel -j $(CORES) --bar --eta -0 \
 	muscle -align {} -output {}.afa
 
-paralog_clusters:
-	find $(CLUSTERS_DIR) -name '*.faa' -print0 | python3 ./make_para.py ./taxa.csv
-
-aligned_paralog_clusters: paralog_clusters
-	find $(CLUSTERS_DIR) -name '*.para' -print0 |\
-	parallel -j $(CORES) --bar --eta -0 \
-	muscle -align {} -output {}.afa
+# paralog_clusters:
+# 	find $(CLUSTERS_DIR) -name '*.faa' -print0 | python3 ./make_para.py ./taxa.csv
+#
+# aligned_paralog_clusters: paralog_clusters
+# 	find $(CLUSTERS_DIR) -name '*.para' -print0 |\
+# 	parallel -j $(CORES) --bar --eta -0 \
+# 	muscle -align {} -output {}.afa
 
 trees: 
 	find $(CLUSTERS_DIR) -name "*.afa" -print0 |\
