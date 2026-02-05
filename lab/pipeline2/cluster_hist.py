@@ -10,9 +10,9 @@ def main(file: str):
     alt.Chart(
         pd.DataFrame({"size": sizes}), title="Rozkład wielkości klastrów"
     ).mark_bar().encode(
-        alt.X("size:Q", title="Rozmiar klastru").bin(step=15),
+        alt.X("size:Q", title="Rozmiar klastru").bin(step=20),
         alt.Y("count():Q", title="Ilość klastrów").scale(type="log"),
-    ).save("cluster_sizes.svg")
+    ).properties(width=800, height=400).save(file.replace(".txt", ".svg"))
 
 
 if __name__ == "__main__":

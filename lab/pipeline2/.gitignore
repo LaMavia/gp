@@ -9,4 +9,5 @@ protein_*
 clusters
 *.treefile
 !publication.treefile
+!tt.treefile
 *.log

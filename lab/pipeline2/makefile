@@ -1,14 +1,18 @@
 CLUSTERS_DIR = ./clusters
-CON_ARGS =
-SUPPORT_THRESHOLD = 70
+SUPPORT_THRESHOLD = 30
 CORES = 16
 CON_TREES = $(patsubst %,%_consensus,orth filtered_orth)
-SUP_TREES = $(patsubst %,%_super,orth para)
+SUP_TREES = $(patsubst %,%_super,orth)
 TREES = $(CON_TREES) $(SUP_TREES)
+TT_TREES = $(TREES:%=tt_%)
 RESULT_TREES = $(TREES:%=%.result.treefile)
 RENAMED_TREES = $(TREES:%=%.renamed.treefile)
+TT_RENAMED_TREES = $(patsubst %,tt_%,$(RENAMED_TREES))
 NCBI_COMPARISONS = $(TREES:%=%-ncbi.comparison.pdf)
 PUB_COMPARISONS = $(TREES:%=%-pub.comparison.pdf)
+TT_COMPARISONS = $(TT_TREES:%=%-tt.comparison.pdf)
+SUPER_JOINED_TREES = $(patsubst %,all_%_trees.treefile,orth)
+MISSING_TT_TAXONS = Rhodotorula_glutinis,Sporobolomyces_roseus
 
 .PHONY: clean
 
@@ -19,7 +23,7 @@ tax_idx.txt: taxa.csv
 
 protein.faa: tax_idx.txt
 	rm -f ./ncbi_dataset.zip
-	datasets --api-key $(NCBI_API_KEY) download genome accession --inputfile $^ --include protein --dehydrated 
+	datasets --api-key $(NCBI_API_KEY) download genome accession --inputfile $< --include protein --dehydrated 
 	unzip ncbi_dataset.zip -d ncbi_dataset/
 	datasets --api-key $(NCBI_API_KEY) rehydrate --directory ncbi_dataset/
 	cat ncbi_dataset/ncbi_dataset/data/**/*.faa > $@
@@ -81,8 +85,8 @@ filtered_orth_trees.treefile:
 		parallel -j $(CORES) --bar --eta -0 \
 		cat {} > $@
 
-all_orth_trees.treefile:
-	find $(CLUSTERS_DIR) -name '*.treefile' -print0 |\
+$(SUPER_JOINED_TREES): all_%_trees.treefile:
+	find $(CLUSTERS_DIR) -name '*$*.afa.treefile' -print0 |\
 		parallel -j $(CORES) --bar --eta -0 \
 		cat {} > $@
 
@@ -92,20 +96,24 @@ orth_consensus.result.treefile: all_orth_trees.treefile
 filtered_orth_consensus.result.treefile: filtered_orth_trees.treefile 
 	iqtree3 -T AUTO --sup-min 0.0 -con $< $@
 
-orth_super.result.treefile: 
-	clann -ln -c clann_commands.txt
+orth_super.result.treefile:  
+	clann -ln -c orth_clann_commands.txt
 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
 	sed -i '2,$$ d' ./Heuristic_result.txt
 	mv ./Heuristic_result.txt $@
-
-para_super.result.treefile: 
-	clann -ln -c para_clann_commands.txt
-	sed -i 's/\[.*\]//' ./Heuristic_result.txt
-	sed -i '2,$$ d' ./Heuristic_result.txt
-	mv ./Heuristic_result.txt $@
+#
+# para_super.result.treefile: all_para_trees.treefile 
+# 	clann -ln -c para_clann_commands.txt
+# 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
+# 	sed -i '2,$$ d' ./Heuristic_result.txt
+# 	mv ./Heuristic_result.txt $@
 
 $(RENAMED_TREES): %.renamed.treefile: %.result.treefile
 	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
+
+$(TT_RENAMED_TREES): tt_%: %
+	python3 ./remove_missing_taxons.py $< $@ $(MISSING_TT_TAXONS)
+	sed -i 's/:\\d*\\.\\d*//' $@
 
 $(NCBI_COMPARISONS): %-ncbi.comparison.pdf: %.renamed.treefile ncbi.phy
 	# rm -f *.comparison.pdf
@@ -115,7 +123,14 @@ $(PUB_COMPARISONS): %-pub.comparison.pdf: %.renamed.treefile publication.treefil
 	# rm -f *.comparison.pdf
 	Rscript ./rf.r $^ $@ "$* vs. Publication"
 
+$(TT_COMPARISONS): %-tt.comparison.pdf: %.renamed.treefile tt.treefile
+	# rm -f *.comparison.pdf
+	Rscript ./rf.r $^ $@ "$* vs. TimeTree"
+
+comparisons: $(NCBI_COMPARISONS) $(PUB_COMPARISONS) $(TT_COMPARISONS)
+
 clean:
 	rm -f tax_idx.txt protein.faa protein_all_seqs.fasta *.fasta *.*.treefile all*.treefile* cluster_sizes.* ncbi_dataset.zip protein_* *.log proteom_ids.txt md5sum.txt 
 	rm -rf $(CLUSTERS_DIR) ncbi_dataset tmp
+
 
