@@ -16,7 +16,7 @@ MISSING_TT_TAXONS = Rhodotorula_glutinis,Sporobolomyces_roseus
 
 .PHONY: clean
 
-all: clusters_dir aligned_orthological_clusters aligned_paralog_clusters trees
+all: clusters_dir aligned_orthological_clusters aligned_paralog_clusters trees comparisons
 
 tax_idx.txt: taxa.csv
 	cat $^ | awk -F, 'NR>1 {{ print $$3 }}' > $@
@@ -101,12 +101,6 @@ orth_super.result.treefile:
 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
 	sed -i '2,$$ d' ./Heuristic_result.txt
 	mv ./Heuristic_result.txt $@
-#
-# para_super.result.treefile: all_para_trees.treefile 
-# 	clann -ln -c para_clann_commands.txt
-# 	sed -i 's/\[.*\]//' ./Heuristic_result.txt
-# 	sed -i '2,$$ d' ./Heuristic_result.txt
-# 	mv ./Heuristic_result.txt $@
 
 $(RENAMED_TREES): %.renamed.treefile: %.result.treefile
 	python3 ./rename_taxa_to_publication.py taxa.csv $< $@
@@ -116,15 +110,12 @@ $(TT_RENAMED_TREES): tt_%: %
 	sed -i 's/:\\d*\\.\\d*//' $@
 
 $(NCBI_COMPARISONS): %-ncbi.comparison.pdf: %.renamed.treefile ncbi.phy
-	# rm -f *.comparison.pdf
 	Rscript ./rf.r $^ $@ "$* vs. NCBI"
 
 $(PUB_COMPARISONS): %-pub.comparison.pdf: %.renamed.treefile publication.treefile
-	# rm -f *.comparison.pdf
 	Rscript ./rf.r $^ $@ "$* vs. Publication"
 
 $(TT_COMPARISONS): %-tt.comparison.pdf: %.renamed.treefile tt.treefile
-	# rm -f *.comparison.pdf
 	Rscript ./rf.r $^ $@ "$* vs. TimeTree"
 
 comparisons: $(NCBI_COMPARISONS) $(PUB_COMPARISONS) $(TT_COMPARISONS)
