@@ -11,3 +11,4 @@ clusters
 !publication.treefile
 !tt.treefile
 *.log
+*.tar.gz
